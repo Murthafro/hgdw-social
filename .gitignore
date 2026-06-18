@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.mp4
+*.mp3
+*.png
+.ffmpeg-tmp/
+REEL-001/

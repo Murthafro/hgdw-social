@@ -1,0 +1,39 @@
+{
+  "name": "hgdw-social",
+  "version": "0.1.0",
+  "description": "HGDW social media video engine — turn a markdown script into a branded vertical video (Reels, TikToks, Shorts) with voiceover, rendered slides, and ffmpeg assembly.",
+  "type": "module",
+  "bin": {
+    "hgdw-social": "./dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json",
+    "./types": "./dist/types.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "playwright": "^1.49.1",
+    "yaml": "^2.6.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
