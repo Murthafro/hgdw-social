@@ -89,8 +89,12 @@ mkdir -p /home/workspace/Skills/hgdw-content-repurposer
 mkdir -p /home/workspace/Skills/hgdw-copy-editor
 mkdir -p /home/workspace/Skills/hgdw-weekly-calibration
 mkdir -p /home/workspace/Skills/hgdw-review-dashboard
+mkdir -p /home/workspace/Skills/hgdw-content-planner
+mkdir -p /home/workspace/Skills/hgdw-content-diagnostics
+mkdir -p /home/workspace/Skills/hgdw-script-writer
 mkdir -p /home/workspace/HGDW/Feedback
 mkdir -p /home/workspace/HGDW/Content/archive
+mkdir -p /home/workspace/HGDW/Content/scripts
 ```
 
 ## Step 2: Write All Reference Files
@@ -109,6 +113,35 @@ Save PART 11 (Content Repurposer) to `/home/workspace/Skills/hgdw-content-repurp
 Save PART 12 (Copy Editor) to `/home/workspace/Skills/hgdw-copy-editor/SKILL.md`
 Save PART 13 (Weekly Calibration) to `/home/workspace/Skills/hgdw-weekly-calibration/SKILL.md`
 Save PART 14 (Review Dashboard) to `/home/workspace/Skills/hgdw-review-dashboard/SKILL.md`
+Save PART 15 (Content Planner) to `/home/workspace/Skills/hgdw-content-planner/SKILL.md`
+Save PART 16 (Content Diagnostics) to `/home/workspace/Skills/hgdw-content-diagnostics/SKILL.md`
+Save PART 17 (Script Writer) to `/home/workspace/Skills/hgdw-script-writer/SKILL.md`
+
+## Step 3b: Store All Context Files
+
+Clone the repo and copy context files so skills can reference them:
+
+```bash
+cd /home/workspace
+if [ -d "hgdw-social" ]; then
+  cd hgdw-social && git pull
+else
+  git clone https://github.com/Murthafro/hgdw-social.git
+fi
+```
+
+This stores the following context files at `/home/workspace/hgdw-social/context/`:
+- `brand-voice.md` — HGDW voice pillars, language rules, sample copy, AI prompting notes
+- `audience-profile.md` — Alex avatar (28-48, wants time back, fears being behind)
+- `hot-girl-manifesto.md` — brand north star and philosophy
+- `content-missions-workbook.md` — the FULL Content to Cash masterclass system (4 missions, 3S framework, 3 pillars, hook library, carousel playbook, posting schedule, Problem-Pursuit-Payoff, Mystery Box technique, Silent Film format, Talking Head system, voice building, symptom-first messaging)
+- `hgdw-course-story-bible.md` — McKee Story-based narrative framework (protagonist, antagonist, story structure, turning points, climax)
+- `hgdw-course-scene-outline.md` — 10-scene brand story architecture + content map
+- `hgdw-course-pitch.md` — logline, world, protagonist, conflict, structure
+- `hgdw-brand.md` — brand name rules, colors, formatting
+- `hgdw-influencer-watchlist.md` — 6-tier watchlist
+- `hgdw-hook-library.md` — 12 hook formulas
+- `hgdw-copywriting-playbook.md` — 5-sweep checklist
 
 ## Step 4: Initialize Intelligence Files
 Save to `/home/workspace/HGDW/Intelligence/trend-index.md`:
@@ -362,9 +395,10 @@ This gives you these additional skills:
 
 ## Step 7: Confirm Setup
 Report back:
-- Directory structure created (including Intelligence/, Feedback/, archive/)
+- Directory structure created (including Intelligence/, Feedback/, archive/, scripts/)
 - Reference files installed (brand + watchlist + hook library + copywriting playbook)
-- HGDW skills installed (list all 9)
+- Context files stored (content-missions-workbook, course story bible, scene outline, pitch, brand voice, audience profile, manifesto)
+- HGDW skills installed (list all 12)
 - Barbie skills installed (list all 14)
 - Community skills installed (list all 5 from Skills Hub + 5 from GitHub)
 - Automations installed (list all 8 with schedules)
@@ -2002,6 +2036,288 @@ After processing any feedback, rebuild the dashboard.
 ```
 
 ---
+
+# PART 15: CONTENT PLANNER SKILL
+> Save to: `/home/workspace/Skills/hgdw-content-planner/SKILL.md`
+
+```
+---
+name: hgdw-content-planner
+description: >-
+  Plan a week of HGDW content using the 4 Missions framework (Attract, Nurture,
+  Position, Convert) and 3 Pillars (Skill, Passion, Story). Tags each post with
+  its mission, pillar, format, and hook type. Outputs a ready-to-batch content
+  calendar. Use when asked to "plan content", "what should I post this week",
+  "fill the content bank", or "batch day".
+compatibility: Created for Zo Computer — HOT GIRLS DONT WORK
+metadata:
+  author: hgdw
+  category: Content
+  display-name: HGDW Content Planner
+  version: "1.0"
+---
+
+# HGDW Content Planner
+
+Plan a full week of content using the 4 Missions + 3 Pillars system.
+
+## Reference Files
+Read these before planning:
+- `/home/workspace/hgdw-social/context/content-missions-workbook.md`
+- `/home/workspace/hgdw-social/context/hgdw-brand.md`
+- `/home/workspace/hgdw-social/context/audience-profile.md`
+- `/home/workspace/hgdw-social/context/hgdw-hook-library.md`
+- `/home/workspace/HGDW/Intelligence/trend-index.md`
+- `/home/workspace/HGDW/Intelligence/content-performance.md`
+
+## The 4 Missions
+| Mission | Job | What it builds |
+|---|---|---|
+| **Attract** | Get attention, bring new people in | Reach |
+| **Nurture** | Build trust, deepen connection | Relationship |
+| **Position** | Establish authority and expertise | Credibility |
+| **Convert** | Turn attention into revenue | Revenue |
+
+## The 3 Pillars
+| Pillar | What it is | What it builds |
+|---|---|---|
+| **Skill** | What you know — AI, automation, building | Credibility + monetization |
+| **Passion** | What you love — lifestyle, community, fun | Likeability, rapport |
+| **Story** | Who you are — transformations, struggles | Trust (fastest-growing) |
+
+## Weekly Mix (7 posts/week)
+By Mission: Attract 3-4, Nurture 1-2, Position 1-2, Convert 0-1
+By Pillar: Skill ~4, Story ~2, Passion ~1
+By Format: Talking head 2-3, Carousel 1-2, B-roll+text 2-3
+
+## Default Weekly Map
+| Day | Pillar | Mission | Format |
+|---|---|---|---|
+| Monday | Skill | Position | Direct to camera |
+| Tuesday | Story | Attract | B-roll + caption |
+| Wednesday | Skill | Position | Carousel |
+| Thursday | Skill | Attract | Direct to camera |
+| Friday | Story | Nurture | Direct to camera |
+| Saturday | Story | Attract | B-roll + caption |
+| Sunday | Passion | Nurture | Carousel or B-roll |
+
+## Steps
+1. Check recent performance data
+2. Pull trending topics from trend index + daily research
+3. Generate 3-5 content ideas per mission (symptom-first hooks, Mystery Box two-layer stories)
+4. Draft 2-3 hook options per post (written + spoken)
+5. Run diagnostic pass (audience-first? structured? specific value? strong hook?)
+6. Save weekly plan to /home/workspace/HGDW/Content/weekly-plan-[date].md
+7. Tell Courtney: mission ratio, strongest hooks, trending topic incorporated, carousel ideas
+```
+
+---
+
+# PART 16: CONTENT DIAGNOSTICS SKILL
+> Save to: `/home/workspace/Skills/hgdw-content-diagnostics/SKILL.md`
+
+```
+---
+name: hgdw-content-diagnostics
+description: >-
+  Diagnose content performance using the 3S Framework (Stop → Stay → Share) and
+  the Bad vs Good content table. Runs a mission audit on recent posts, identifies
+  which metric to fix first, and provides specific fixes. Use when asked to
+  "diagnose my content", "why aren't my posts working", "audit my content",
+  "check my metrics", or "run the 3S".
+compatibility: Created for Zo Computer — HOT GIRLS DONT WORK
+metadata:
+  author: hgdw
+  category: Content
+  display-name: HGDW Content Diagnostics
+  version: "1.0"
+---
+
+# HGDW Content Diagnostics
+
+Diagnose content performance using the 3S Framework. Fix problems in order.
+
+## Reference Files
+- `/home/workspace/hgdw-social/context/content-missions-workbook.md` — Parts 2, 4, 5
+- `/home/workspace/HGDW/Intelligence/content-performance.md`
+
+## The 3S Framework (diagnose in this exact order)
+
+### S1: STOP — Are you stopping the scroll?
+Metric: Skip rate (% who swipe away in first 3 seconds)
+- Compare YOUR skip rate to YOUR typical skip rate
+- If skip rate is HIGH → fix the hook FIRST. Don't move to S2.
+- Fixes: symptom-first framing, text overlay for muted viewers, different hook type
+
+### S2: STAY — If they stopped, are they staying?
+Only check AFTER Stop is healthy.
+Metric: Retention rate = average watch time / total video length
+- Judge on weekly average, not daily
+- Fixes: Problem-Pursuit-Payoff structure, re-hooks (mystery boxes), fix pacing
+
+### S3: SHARE — If they stayed, are they sharing?
+Only check AFTER Stay is healthy.
+Metric: Shares per reach (#1 signal per Instagram head of product)
+- Fixes: specific pain point + actionable solution, personal hooks > generic
+
+## Mission Audit
+Tag every recent post with A/N/P/C.
+Flag imbalances:
+- Too much P+C = burning out existing audience
+- No A = audience stops growing
+- No N = followers never trust you
+- No C = never monetizing
+
+## Steps
+1. Define success barometer (views >= followers, or 30-day avg if pivoted)
+2. Run mission audit on last 2 weeks
+3. Run 3S in order — fix S1 before S2, S2 before S3
+4. Run Bad vs Good quality check on each post
+5. Analyze hook types vs skip rates
+6. Save report to /home/workspace/HGDW/Intelligence/content-diagnostics-[date].md
+7. Tell Courtney: which S needs fixing, the specific fix, mission adjustment needed
+```
+
+---
+
+# PART 17: SCRIPT WRITER SKILL
+> Save to: `/home/workspace/Skills/hgdw-script-writer/SKILL.md`
+
+```
+---
+name: hgdw-script-writer
+description: >-
+  Write video scripts using the 5-step Talking Head system, Silent Film format,
+  Problem-Pursuit-Payoff structure, and Mystery Box technique. Produces
+  platform-ready scripts with hooks, re-hooks, and CTAs. Use when asked to
+  "write a script", "script this idea", "make a reel", "write a talking head",
+  or "turn this into a video".
+compatibility: Created for Zo Computer — HOT GIRLS DONT WORK
+metadata:
+  author: hgdw
+  category: Content
+  display-name: HGDW Script Writer
+  version: "1.0"
+---
+
+# HGDW Script Writer
+
+Write platform-ready video scripts using proven Content to Cash frameworks.
+
+## Reference Files
+- `/home/workspace/hgdw-social/context/content-missions-workbook.md` — Parts 8, 13, 14, 17, 18
+- `/home/workspace/hgdw-social/context/hgdw-brand.md`
+- `/home/workspace/hgdw-social/context/audience-profile.md`
+- `/home/workspace/hgdw-social/context/hgdw-course-story-bible.md`
+
+## Three Formats
+
+| Format | Best for | Builds |
+|---|---|---|
+| Talking head (DTC) | Trust, personality, offers | Deep connection |
+| Silent film (b-roll+text) | Storytelling, transformation, reach | Broad awareness |
+| Carousel | Step-by-step, lists, engagement | Comments + saves |
+
+## Before Scripting — Two-Layer Story (Mystery Box)
+- Surface story: What is this video functionally about?
+- Real story: What is it REALLY about emotionally?
+Example: "how to batch content in 2 hours" → "how to stop letting perfectionism steal your presence with your family"
+
+## Problem-Pursuit-Payoff Structure
+- **Problem** (0-5 sec): Open with struggle. Viewer sees themselves.
+- **Pursuit** (5-35 sec): Messy middle — what you tried, what was hard. Don't skip.
+- **Payoff** (~40 sec): The transformation or realization.
+
+## Hook Rules
+- Symptom-first (patient language, not doctor language)
+- Pair spoken hook with on-screen text (58% watch muted)
+- Open with question, not answer
+- "I" framing if not yet established, "you" if established
+- Delay the reveal as long as possible
+
+## Talking Head System (5 steps)
+1. Pick one idea (no screens, just think)
+2. Voice-dictate thoughts (ramble 15-25 min, AI extracts structure)
+3. Revise AI output into your words (cross out phrases you'd never say)
+4. Film one line at a time (no teleprompter — shows in eyes)
+5. Cut empty spaces (3.5 min raw → tight 90 sec)
+
+## Silent Film Format
+1. Frame 1 — Struggle + timestamp (year/age on screen)
+2. Frames 2-4 — Pursuit (music builds, one idea per frame)
+3. Frame 5 — Payoff
+4. Frame 6 — CTA
+Music: rising action. Pacing: every line readable aloud before next frame.
+
+## Mystery Box Checklist
+□ Hook = question or unresolved moment (not the answer)
+□ At least one new question mid-video
+□ Reveal delayed as long as possible
+□ Two-layer story identified
+□ At least one thing intentionally withheld
+
+## Output
+Save to /home/workspace/HGDW/Content/scripts/[date]-[slug].md
+Include: mission tag, pillar, format, two-layer story, full script, 3 hook options, CTA
+```
+
+---
+
+# PART 18: CONTEXT FILES — STORED ON MACHINE
+
+These files are stored in the repo at `/home/workspace/hgdw-social/context/` after Step 3b clones it.
+Skills reference them at those paths. Here is a summary of each:
+
+## Content Missions & Automation Workbook (content-missions-workbook.md)
+The complete Content to Cash masterclass system. Contains:
+- **Part 1:** The 4 Missions of Content (Attract, Nurture, Position, Convert)
+- **Part 2:** Diagnosing Content — Bad vs Good table
+- **Part 3:** How the Algorithm Actually Works
+- **Part 4:** Defining Success (views >= followers, dam model of growth)
+- **Part 5:** The 3S Framework (Stop → Stay → Share)
+- **Part 6:** Posting Schedule by Creator Stage
+- **Part 7:** Carousel Playbook (checklist, carousels vs reels)
+- **Part 8:** Hook Library (3 hook channels, hook types, "I" vs "you" framing)
+- **Part 9:** Worksheet — Plan Your Own Content System
+- **Part 10:** Automation Plan (8-step repeatable system)
+- **Part 11:** Building Your Voice — You Are the Niche (3 pillars: Skill, Passion, Story)
+- **Part 12:** Symptom-First Messaging (patient language, not doctor language)
+- **Part 13:** 3 Starter Formats with Good vs Bad breakdown
+- **Part 14:** Problem-Pursuit-Payoff storytelling structure
+- **Part 15:** AI Brand Guide Prompt (4-part setup)
+- **Part 16:** Voice & Pillar Worksheet
+- **Part 17:** Making the Videos — Talking Head 5-Step System + Silent Film Format
+- **Part 18:** The Mystery Box — Scripting for Curiosity (JJ Abrams framework)
+
+## Course Story Bible (hgdw-course-story-bible.md)
+McKee Story-based narrative framework:
+- Logline, premise, controlling idea
+- The World (industrial-age villain, power dynamics)
+- Protagonist (Every Woman, conscious want vs unconscious need, fatal flaw)
+- Forces of Antagonism (inner, personal, social, environmental)
+- Story Structure (inciting incident, 3 turning points, crisis, climax, resolution)
+- Dialogue & Voice (Elle Woods energy, the text she sends her girlfriend)
+
+## Course Scene Outline (hgdw-course-scene-outline.md)
+10-scene brand story architecture mapped to content:
+- Act 1: The World She's In (grinding, false entry, finds HGDW)
+- Act 2: The Transformation (first win, off laptop, party scene, life runs on agents)
+- Act 3: The Realization ("I'm not behind. I'm early.")
+- Content Map: how each scene becomes a video
+
+## Course Pitch (hgdw-course-pitch.md)
+One-page pitch: logline, world, protagonist, conflict, structure, why this story.
+
+## Brand Voice (brand-voice.md)
+Full brand voice guide: tone, 3 pillars (Ownership, Joy as Strategy, Abundance), language rules, sample copy, AI prompting notes.
+
+## Audience Profile (audience-profile.md)
+Alex avatar: demographics, psychographics, transformation, where she hangs out, objections, secondary audience.
+
+## Hot Girl Manifesto (hot-girl-manifesto.md)
+Brand philosophy north star: "The future belongs to women who can dream in beauty and execute in systems."
+
+---
 ---
 ---
 
@@ -2009,7 +2325,7 @@ After processing any feedback, rebuild the dashboard.
 
 1. Upload `hgdw-zo-setup.md` to your fresh Zo instance
 2. Tell Zo: **"Read this file and become the HGDW Chief of Staff. Set up the entire content engine."**
-3. Zo will install everything: persona, 9 HGDW skills, 14 Barbie skills, 5 community skills, 8 automations
+3. Zo will install everything: persona, 12 HGDW skills, 14 Barbie skills, 5 community skills, 8 automations, full context library
 4. Fill in `/home/workspace/HGDW/config/blog-api.md` with your CMS credentials
 5. Connect Stripe in Settings > Integrations (for revenue tracking)
 6. After publishing content, log results in `/home/workspace/HGDW/Intelligence/content-performance.md`
@@ -2029,6 +2345,9 @@ After processing any feedback, rebuild the dashboard.
 - "find me a cool AI tool" — scouts new tools for Alex
 - "build the dashboard" / "show me what you've done" — builds the review dashboard
 - "approve #1" / "feedback #2: make the hook punchier" / "kill #3" — review draft approvals
+- "plan this week's content" / "batch day" — generates weekly content calendar with missions + pillars
+- "diagnose my content" / "run the 3S" / "why aren't my posts working" — runs the 3S diagnostic
+- "write a script for [topic]" / "script this" — writes a platform-ready video script
 
 **This Zo instance is ONLY for HGDW marketing.** Keep your main Chief of Staff
 separate for personal/business ops. This one lives and breathes content.
@@ -2043,9 +2362,10 @@ Daily Research (7am) → Trend Synthesis (8:30am) → Review Dashboard + SMS (no
 ```
 
 **After setup, Zo should greet you with something like:**
-> "HGDW Content Chief online. Engine installed — 9 HGDW skills, 14 Barbie skills, 5 community
-> skills, 8 automations, 6-tier watchlist, intelligence layer active. Review dashboard will
-> text you at noon. Ready to run today's research or draft content. What do you need?"
+> "HGDW Content Chief online. Engine installed — 12 HGDW skills, 14 Barbie skills, 5 community
+> skills, 8 automations, 6-tier watchlist, intelligence layer + full Content to Cash system active.
+> Review dashboard will text you at noon. Ready to run today's research, plan content, write
+> scripts, or diagnose performance. What do you need?"
 
 ---
 
