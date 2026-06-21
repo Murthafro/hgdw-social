@@ -25,6 +25,8 @@ Read these before planning:
 - `/home/workspace/hgdw-social/context/hgdw-brand.md` — voice and language rules
 - `/home/workspace/hgdw-social/context/audience-profile.md` — who Alex is
 - `/home/workspace/hgdw-social/context/hgdw-hook-library.md` — hook formulas
+- `/home/workspace/hgdw-social/context/hgdw-story-continuity.md` — narrative threads + beats
+- `/home/workspace/HGDW/Intelligence/story-log.md` — what's been posted + thread health
 - `/home/workspace/HGDW/Intelligence/trend-index.md` — current trending topics
 - `/home/workspace/HGDW/Intelligence/content-performance.md` — what's worked before
 
@@ -78,6 +80,17 @@ Every post lives in ONE pillar:
 | Friday | Story | Nurture | Direct to camera |
 | Saturday | Story | Attract | B-roll + caption |
 | Sunday | Passion | Nurture | Carousel or B-roll |
+
+## Step 0: Check Story Continuity
+
+Read the story log at `/home/workspace/HGDW/Intelligence/story-log.md`.
+- Which threads are STARVING (14+ days untouched)? → Prioritize those.
+- Which beats are overrepresented? → Avoid those this week.
+- Any recurring series due for a new episode?
+- What was the last callback? If none in 2 weeks, plan one.
+- Read the latest story continuity report for specific recommendations.
+
+The weekly plan MUST advance at least 2 different narrative threads and include at least 1 callback.
 
 ## Step 1: Check Recent Performance
 
@@ -150,16 +163,24 @@ Save the weekly plan to `/home/workspace/HGDW/Content/weekly-plan-[date].md`:
 ```markdown
 # HGDW Content Plan — Week of [DATE]
 
+## Story Continuity Check
+- Threads advancing this week: [list]
+- Starving threads addressed: [list]
+- Beats used: [list — avoid clustering]
+- Callbacks planned: [which post references which previous post]
+- Recurring series episode: [if any]
+
 ## Content Calendar
 
-| Day | Post | Mission | Pillar | Format | Hook | Status |
-|---|---|---|---|---|---|---|
-| Mon | [title] | Position | Skill | DTC | [hook] | DRAFT |
-| Tue | [title] | Attract | Story | B-roll | [hook] | DRAFT |
-| ... | ... | ... | ... | ... | ... | ... |
+| Day | Post | Mission | Pillar | Format | Beat | Thread | Hook | Entry Point | Status |
+|---|---|---|---|---|---|---|---|---|---|
+| Mon | [title] | Position | Skill | DTC | 4 | Tools | [hook] | Warm | DRAFT |
+| Tue | [title] | Attract | Story | B-roll | 1 | Transformation | [hook] | Cold | DRAFT |
+| ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
 
 ## Mission Balance: A:_ N:_ P:_ C:_
 ## Pillar Balance: Skill:_ Story:_ Passion:_
+## Thread Balance: Transformation:_ Community:_ Tools:_ Rebellion:_ Golden Age:_
 
 ## Hook Bank
 [2-3 hook options per post]
@@ -172,6 +193,7 @@ Save the weekly plan to `/home/workspace/HGDW/Content/weekly-plan-[date].md`:
 - Trending topics incorporated: [list]
 - Hook types to test this week: [types]
 - Performance learning applied: [what changed based on data]
+- Story continuity notes: [what threads/beats were prioritized and why]
 ```
 
 ## Step 7: Confirm

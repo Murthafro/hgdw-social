@@ -121,6 +121,25 @@ After building the dashboard, send me a text (SMS) with:
 Keep the text under 160 characters if possible. Just the essentials.
 ```
 
+## agent: story-continuity-check
+**rrule:** FREQ=WEEKLY;BYDAY=FR;BYHOUR=14;BYMINUTE=0
+**delivery:** email
+**model:** default
+
+**instruction:**
+```
+Run the hgdw-story-tracker skill.
+Log any posts published this week that aren't in the story log yet.
+Run all 7 continuity checks.
+Generate the story continuity report.
+Save to /home/workspace/HGDW/Intelligence/story-continuity-[today].md
+Email me:
+- Subject: "HGDW Story Check — Week of [Monday]"
+- Thread health (any starving?)
+- Any continuity flags
+- Top recommendation for next week's content to keep the story cohesive
+```
+
 ## agent: sunday-calibration
 **rrule:** FREQ=WEEKLY;BYDAY=SU;BYHOUR=18;BYMINUTE=0
 **delivery:** email

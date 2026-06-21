@@ -92,6 +92,7 @@ mkdir -p /home/workspace/Skills/hgdw-review-dashboard
 mkdir -p /home/workspace/Skills/hgdw-content-planner
 mkdir -p /home/workspace/Skills/hgdw-content-diagnostics
 mkdir -p /home/workspace/Skills/hgdw-script-writer
+mkdir -p /home/workspace/Skills/hgdw-story-tracker
 mkdir -p /home/workspace/HGDW/Feedback
 mkdir -p /home/workspace/HGDW/Content/archive
 mkdir -p /home/workspace/HGDW/Content/scripts
@@ -116,6 +117,7 @@ Save PART 14 (Review Dashboard) to `/home/workspace/Skills/hgdw-review-dashboard
 Save PART 15 (Content Planner) to `/home/workspace/Skills/hgdw-content-planner/SKILL.md`
 Save PART 16 (Content Diagnostics) to `/home/workspace/Skills/hgdw-content-diagnostics/SKILL.md`
 Save PART 17 (Script Writer) to `/home/workspace/Skills/hgdw-script-writer/SKILL.md`
+Save PART 19 (Story Tracker) to `/home/workspace/Skills/hgdw-story-tracker/SKILL.md`
 
 ## Step 3b: Store All Context Files
 
@@ -142,6 +144,7 @@ This stores the following context files at `/home/workspace/hgdw-social/context/
 - `hgdw-influencer-watchlist.md` — 6-tier watchlist
 - `hgdw-hook-library.md` — 12 hook formulas
 - `hgdw-copywriting-playbook.md` — 5-sweep checklist
+- `hgdw-story-continuity.md` — narrative threads, 10 beats, continuity rules, anti-patterns
 
 ## Step 4: Initialize Intelligence Files
 Save to `/home/workspace/HGDW/Intelligence/trend-index.md`:
@@ -171,6 +174,57 @@ Save to `/home/workspace/HGDW/Intelligence/content-performance.md`:
 ---
 ```
 
+Save to `/home/workspace/HGDW/Intelligence/story-log.md`:
+```markdown
+# HGDW Story Log
+> Every post is a chapter. This log tracks the narrative so the story stays cohesive.
+> Updated after every batch or publication.
+
+---
+
+## Thread Health (last updated: —)
+
+| Thread | Last touched | Days since | Status |
+|---|---|---|---|
+| 1. The Transformation | — | — | NEW |
+| 2. The Community | — | — | NEW |
+| 3. The Tools | — | — | NEW |
+| 4. The Rebellion | — | — | NEW |
+| 5. The Golden Age | — | — | NEW |
+
+## Beat Distribution (all time)
+
+| Beat | Count | Last used | Notes |
+|---|---|---|---|
+| 1. The Grind | 0 | — | |
+| 2. The Wrong Room | 0 | — | |
+| 3. The Door Opens | 0 | — | |
+| 4. The First Win | 0 | — | |
+| 5. Off the Laptop | 0 | — | |
+| 6. The Party Scene | 0 | — | |
+| 7. Life on Agents | 0 | — | |
+| 8. The Opportunity | 0 | — | |
+| 9. The Inversion | 0 | — | |
+| 10. The Resolution | 0 | — | |
+
+## Recurring Series Tracker
+
+| Series | Thread | Last episode | Total episodes |
+|---|---|---|---|
+| "Before AI / After AI" | Transformation | — | 0 |
+| "My girlfriend just texted me..." | Community | — | 0 |
+| "Watch me build this in X min" | Tools | — | 0 |
+| "Things they don't tell you about AI" | Rebellion | — | 0 |
+| "Work Less. ___ More." | Golden Age | — | 0 |
+
+---
+
+## Post Log
+
+| # | Date | Platform | Title/Hook | Mission | Pillar | Beat | Thread(s) | Entry Point | Callback? | Performance |
+|---|---|---|---|---|---|---|---|---|---|---|
+```
+
 Save to `/home/workspace/HGDW/Research/weekly-tracker.md`:
 ```markdown
 # HGDW Weekly Research Tracker
@@ -188,7 +242,7 @@ Always post as draft unless explicitly asked to publish.
 ```
 
 ## Step 5: Create All Automations
-Create these 8 automations:
+Create these 9 automations:
 
 ### Automation 1: Daily AI Research Sweep
 - **RRULE:** `FREQ=WEEKDAY;BYHOUR=7;BYMINUTE=0` (Mon-Fri at 7am)
@@ -312,6 +366,23 @@ After building the dashboard, send me a text (SMS) with:
 Keep the text under 160 characters. Just the essentials.
 ```
 
+### Automation 9: Friday Story Continuity Check
+- **RRULE:** `FREQ=WEEKLY;BYDAY=FR;BYHOUR=14;BYMINUTE=0` (Friday at 2pm)
+- **Delivery:** email
+- **Instruction:**
+```
+Run the hgdw-story-tracker skill.
+Log any posts published this week that aren't in the story log yet.
+Run all 7 continuity checks.
+Generate the story continuity report.
+Save to /home/workspace/HGDW/Intelligence/story-continuity-[today].md
+Email me:
+- Subject: "HGDW Story Check — Week of [Monday]"
+- Thread health (any starving?)
+- Any continuity flags
+- Top recommendation for next week's content to keep the story cohesive
+```
+
 ## Step 6: Install Community Skills (REQUIRED)
 These community skills power up the content engine. Install them NOW:
 
@@ -398,10 +469,11 @@ Report back:
 - Directory structure created (including Intelligence/, Feedback/, archive/, scripts/)
 - Reference files installed (brand + watchlist + hook library + copywriting playbook)
 - Context files stored (content-missions-workbook, course story bible, scene outline, pitch, brand voice, audience profile, manifesto)
-- HGDW skills installed (list all 12)
+- Story log initialized (story-log.md with thread health, beat distribution, series tracker)
+- HGDW skills installed (list all 13)
 - Barbie skills installed (list all 14)
 - Community skills installed (list all 5 from Skills Hub + 5 from GitHub)
-- Automations installed (list all 8 with schedules)
+- Automations installed (list all 9 with schedules)
 - Intelligence files initialized (trend index, calibration log, performance tracker)
 - Action needed: fill in blog API config
 - Action needed: connect Stripe in Settings > Integrations (for revenue tracking)
@@ -2317,6 +2389,78 @@ Alex avatar: demographics, psychographics, transformation, where she hangs out, 
 ## Hot Girl Manifesto (hot-girl-manifesto.md)
 Brand philosophy north star: "The future belongs to women who can dream in beauty and execute in systems."
 
+## Story Continuity Guide (hgdw-story-continuity.md)
+Master reference for narrative cohesion. Contains:
+- The brand story arc (grinding → finds HGDW → first win → off laptop → phone life → freedom)
+- 10 narrative beats every post maps to
+- 5 narrative threads (Transformation, Community, Tools, Rebellion, Golden Age)
+- Continuity rules (no thread dormant 14+ days, callbacks every 2 weeks, visual identity evolution)
+- 5 recurring series anchors (one per thread)
+- Anti-patterns to catch (thread starvation, beat clustering, tone drift, laptop creep)
+
+---
+
+# PART 19: STORY TRACKER SKILL
+> Save to: `/home/workspace/Skills/hgdw-story-tracker/SKILL.md`
+
+```
+---
+name: hgdw-story-tracker
+description: >-
+  Track every piece of HGDW content in a persistent story log that maintains
+  narrative continuity. Logs post theme, mission, pillar, narrative beat, thread,
+  audience entry point, and callbacks. Flags thread starvation, beat clustering,
+  and tone drift. Use when asked to "log this post", "update the story log",
+  "check story continuity", "what threads need attention", or triggered after
+  content is published.
+compatibility: Created for Zo Computer — HOT GIRLS DONT WORK
+metadata:
+  author: hgdw
+  category: Content
+  display-name: HGDW Story Tracker
+  version: "1.0"
+---
+
+# HGDW Story Tracker
+
+Maintain narrative continuity across all HGDW content. Every post is a chapter.
+
+## Reference Files
+- `/home/workspace/hgdw-social/context/hgdw-story-continuity.md` — threads, beats, rules
+- `/home/workspace/hgdw-social/context/hgdw-course-story-bible.md` — full narrative framework
+- `/home/workspace/hgdw-social/context/hgdw-course-scene-outline.md` — 10-scene architecture
+- `/home/workspace/HGDW/Intelligence/story-log.md` — the persistent story log
+
+## The Story Log
+Lives at `/home/workspace/HGDW/Intelligence/story-log.md` (initialized in Step 4).
+
+## How to Log a Post
+1. Identify: Mission (A/N/P/C), Pillar, Beat (1-10), Thread(s), Theme, Emotional register, Entry point (Cold/Warm/Hot Alex), Callback reference
+2. Append row to Post Log table
+3. Update Thread Health: ACTIVE (< 7 days), WATCH (7-13 days), STARVING (14+ days)
+4. Update Beat Distribution counts
+5. Update Recurring Series tracker if applicable
+
+## 7 Continuity Checks (run after logging)
+1. **Thread Starvation** — Any thread 14+ days untouched? Flag it.
+2. **Beat Clustering** — 40%+ of last 2 weeks on same beat? Flag it.
+3. **Callbacks** — No callbacks in 2 weeks? Flag it.
+4. **Tone Drift** — Read last 5 posts. Any feel corporate/heavy/jargon-y? Flag with specifics.
+5. **Visual Identity** — Beat 6-10 content showing laptop/desk? Flag it. (Phone + text bubbles + woman somewhere alive.)
+6. **Mission Balance** — All P+C = burning audience. No A = stalled growth. No N = no trust. No C = no revenue.
+7. **Entry Point Coverage** — No Cold Alex content = not reaching new people. No Hot Alex = not converting.
+
+## Output: Story Continuity Report
+Save to `/home/workspace/HGDW/Intelligence/story-continuity-[date].md`:
+- Thread health table
+- Flags from all 7 checks
+- Narrative momentum (strongest thread, weakest thread)
+- 3 specific content recommendations for story cohesion
+- Recurring series status + suggestions for next episodes
+
+Tell Courtney: posts logged, thread health, any flags, the #1 thing to fix for cohesion.
+```
+
 ---
 ---
 ---
@@ -2325,7 +2469,7 @@ Brand philosophy north star: "The future belongs to women who can dream in beaut
 
 1. Upload `hgdw-zo-setup.md` to your fresh Zo instance
 2. Tell Zo: **"Read this file and become the HGDW Chief of Staff. Set up the entire content engine."**
-3. Zo will install everything: persona, 12 HGDW skills, 14 Barbie skills, 5 community skills, 8 automations, full context library
+3. Zo will install everything: persona, 13 HGDW skills, 14 Barbie skills, 5 community skills, 9 automations, full context library + story continuity system
 4. Fill in `/home/workspace/HGDW/config/blog-api.md` with your CMS credentials
 5. Connect Stripe in Settings > Integrations (for revenue tracking)
 6. After publishing content, log results in `/home/workspace/HGDW/Intelligence/content-performance.md`
@@ -2348,6 +2492,8 @@ Brand philosophy north star: "The future belongs to women who can dream in beaut
 - "plan this week's content" / "batch day" — generates weekly content calendar with missions + pillars
 - "diagnose my content" / "run the 3S" / "why aren't my posts working" — runs the 3S diagnostic
 - "write a script for [topic]" / "script this" — writes a platform-ready video script
+- "log this post" / "update the story log" — logs content to the story tracker
+- "check story continuity" / "what threads need attention" — runs continuity checks + flags issues
 
 **This Zo instance is ONLY for HGDW marketing.** Keep your main Chief of Staff
 separate for personal/business ops. This one lives and breathes content.
@@ -2356,16 +2502,17 @@ separate for personal/business ops. This one lives and breathes content.
 ```
 Daily Research (7am) → Trend Synthesis (8:30am) → Review Dashboard + SMS (noon)
 → Blog (Tue) → Email (Wed) → Social (Tue) → Repurpose (Thu)
-→ Calibrate (Sun) → REPEAT
+→ Story Continuity Check (Fri 2pm) → Calibrate (Sun) → REPEAT
      ↑                                                         |
      └─── learns from performance data + Courtney feedback ←──┘
 ```
 
 **After setup, Zo should greet you with something like:**
-> "HGDW Content Chief online. Engine installed — 12 HGDW skills, 14 Barbie skills, 5 community
-> skills, 8 automations, 6-tier watchlist, intelligence layer + full Content to Cash system active.
-> Review dashboard will text you at noon. Ready to run today's research, plan content, write
-> scripts, or diagnose performance. What do you need?"
+> "HGDW Content Chief online. Engine installed — 13 HGDW skills, 14 Barbie skills, 5 community
+> skills, 9 automations, 6-tier watchlist, intelligence layer + story continuity system + full
+> Content to Cash system active. Every post is tracked as a chapter in our brand story. Review
+> dashboard texts you at noon. Story continuity report every Friday. Ready to plan, write, diagnose,
+> or track. What do you need?"
 
 ---
 

@@ -26,6 +26,18 @@ Read:
 - `/home/workspace/hgdw-social/context/audience-profile.md` — who Alex is
 - `/home/workspace/hgdw-social/context/hgdw-hook-library.md` — hook formulas
 - `/home/workspace/hgdw-social/context/hgdw-course-story-bible.md` — narrative framework
+- `/home/workspace/hgdw-social/context/hgdw-story-continuity.md` — threads + beats
+- `/home/workspace/HGDW/Intelligence/story-log.md` — what's been posted, thread health
+
+## Step 0: Check Story Position
+
+Before writing, read the story log to understand:
+- Which narrative thread should this script advance?
+- Which beat does this map to?
+- Is there a callback opportunity to a previous post?
+- Which audience entry point is this for (Cold/Warm/Hot Alex)?
+
+Tag these in the output so the story tracker can log them.
 
 ## Step 1: Determine Format
 
@@ -179,6 +191,12 @@ Save to `/home/workspace/HGDW/Content/scripts/[date]-[slug].md`:
 - Surface: [topic]
 - Real: [emotional truth]
 
+## Story Position
+- **Beat:** [1-10] — [beat name]
+- **Thread(s):** [which narrative thread(s) this advances]
+- **Entry Point:** [Cold / Warm / Hot Alex]
+- **Callback:** [references to previous post, or "none"]
+
 ## Script
 [full script with on-screen text + spoken lines]
 
@@ -194,4 +212,6 @@ Save to `/home/workspace/HGDW/Content/scripts/[date]-[slug].md`:
 [the ask]
 ```
 
-Tell Courtney: the hook, the two-layer story, and the CTA.
+After saving the script, log it in the story tracker at `/home/workspace/HGDW/Intelligence/story-log.md`.
+
+Tell Courtney: the hook, the two-layer story, the narrative thread, and the CTA.

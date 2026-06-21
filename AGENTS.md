@@ -26,7 +26,7 @@ All configuration lives in `zo/`:
 
 ## Skills (22 included)
 
-### Content Engine (13 HGDW-specific)
+### Content Engine (14 HGDW-specific)
 
 | Skill | What It Does | Credentials Needed? |
 |-------|-------------|-------------------|
@@ -43,6 +43,7 @@ All configuration lives in `zo/`:
 | **hgdw-content-planner** | Weekly content calendar using 4 Missions + 3 Pillars system | None |
 | **hgdw-content-diagnostics** | 3S Framework diagnostics (Stop → Stay → Share) + mission audit | None |
 | **hgdw-script-writer** | Video scripts: Talking Head, Silent Film, Carousel with Mystery Box | None |
+| **hgdw-story-tracker** | Tracks narrative continuity: threads, beats, callbacks, anti-patterns | None |
 
 ### Ported from Barbie (14 operational skills)
 
