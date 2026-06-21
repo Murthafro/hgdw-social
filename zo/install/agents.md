@@ -100,6 +100,27 @@ Email me:
 - What was repurposed into what, where saved
 ```
 
+## agent: daily-review-dashboard
+**rrule:** FREQ=DAILY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=12;BYMINUTE=0
+**delivery:** sms
+**model:** default
+
+**instruction:**
+```
+Run the hgdw-review-dashboard skill.
+Build the daily review dashboard at /home/workspace/HGDW/dashboard.md
+Scan all content directories for drafts awaiting approval.
+Pull recent research highlights and trend data.
+Check content performance tracker for published results.
+
+After building the dashboard, send me a text (SMS) with:
+- How many drafts are waiting for my approval
+- The strongest trend right now
+- One-line on what needs my attention most
+
+Keep the text under 160 characters if possible. Just the essentials.
+```
+
 ## agent: sunday-calibration
 **rrule:** FREQ=WEEKLY;BYDAY=SU;BYHOUR=18;BYMINUTE=0
 **delivery:** email

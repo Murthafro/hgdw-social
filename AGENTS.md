@@ -26,7 +26,7 @@ All configuration lives in `zo/`:
 
 ## Skills (22 included)
 
-### Content Engine (8 HGDW-specific)
+### Content Engine (10 HGDW-specific)
 
 | Skill | What It Does | Credentials Needed? |
 |-------|-------------|-------------------|
@@ -39,6 +39,7 @@ All configuration lives in `zo/`:
 | **hgdw-content-repurposer** | One piece → 7+ formats across platforms | None |
 | **hgdw-copy-editor** | 5-sweep quality gate (structure, voice, specificity, proof, platform) | None |
 | **hgdw-weekly-calibration** | Sunday learning loop — adjusts sources, priorities, strategy | None |
+| **hgdw-review-dashboard** | Daily dashboard of all work + SMS reminder to review | None |
 
 ### Ported from Barbie (14 operational skills)
 
@@ -87,10 +88,11 @@ TIER 2 (Women AI Leaders) + TIER 3 (Women Creators)
 ## Engine Cycle
 
 ```
-Daily Research (7am) → Trend Synthesis (8:30am) → Blog (Tue) → Email (Wed)
-→ Social Posts (Tue) → Repurpose (Thu) → Calibrate (Sun) → REPEAT
+Daily Research (7am) → Trend Synthesis (8:30am) → Review Dashboard (noon, SMS)
+→ Blog (Tue) → Email (Wed) → Social Posts (Tue) → Repurpose (Thu)
+→ Calibrate (Sun) → REPEAT
      ↑                                                         |
-     └─── learns from performance data ←──────────────────────┘
+     └─── learns from performance data + Courtney feedback ←──┘
 ```
 
 ## Context Files (in `context/`)
