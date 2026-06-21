@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOT GIRLS DONT WORK — Brand & Design Brief</title>
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+    /* ── RESET & BASE ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow:    #FFD56B;
+      --coral:     #FF7E5F;
+      --sunset:    #FF5263;
+      --black:     #000000;
+      --charcoal:  #1C1C1E;
+      --white:     #FFFFFF;
+      --cream:     #FFF8E7;
+      --lgray:     #F5F5F5;
+      --mgray:     #E0E0E0;
+      --dgray:     #888888;
+      --gradient:  linear-gradient(90deg, #FFD56B 0%, #FF7E5F 50%, #FF5263 100%);
+      --grad-h:    linear-gradient(90deg, #FFD56B 0%, #FF7E5F 50%, #FF5263 100%);
+      --font:      'Albert Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--white);
+      color: var(--charcoal);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── SCROLLBAR ──────────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--lgray); }
+    ::-webkit-scrollbar-thumb { background: var(--gradient); border-radius: 3px; }
+
+    /* ── SIDEBAR NAV ────────────────────────────────────────────── */
+    .sidebar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 240px;
+      height: 100vh;
+      background: var(--charcoal);
+      overflow-y: auto;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      padding: 32px 0 24px;
+    }
+
+    .sidebar-logo {
+      padding: 0 24px 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 20px;
+    }
+
+    .sidebar-logo span {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.3;
+    }
+
+    .sidebar-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+      padding: 0 24px 8px;
+    }
+
+    .sidebar nav a {
+      display: block;
+      padding: 9px 24px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: all 0.2s;
+      border-left: 2px solid transparent;
+    }
+
+    .sidebar nav a:hover {
+      color: var(--white);
+      background: rgba(255,255,255,0.05);
+      border-left-color: var(--coral);
+    }
+
+    .sidebar nav a.active {
+      color: var(--white);
+      border-left-color: var(--sunset);
+    }
+
+    /* ── MAIN CONTENT ───────────────────────────────────────────── */
+    .main {
+      margin-left: 240px;
+      min-height: 100vh;
+    }
+
+    /* ── COVER ──────────────────────────────────────────────────── */
+    .cover {
+      min-height: 100vh;
+      background: var(--charcoal);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 80px 80px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      bottom: -120px; right: -120px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(255,213,107,0.15) 0%, rgba(255,82,99,0.06) 60%, transparent 80%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cover-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--coral);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .cover-title {
+      font-size: clamp(48px, 6vw, 80px);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.05;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+
+    .cover-subtitle {
+      font-size: clamp(18px, 2vw, 24px);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 40px;
+    }
+
+    .cover-rule {
+      width: 80px;
+      height: 3px;
+      background: var(--gradient);
+      margin-bottom: 40px;
+      border-radius: 2px;
+    }
+
+    .cover-tagline {
+      font-size: 16px;
+      font-style: italic;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 60px;
+      letter-spacing: 0.02em;
+    }
+
+    .cover-meta {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .cover-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .cover-meta-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+    }
+
+    .cover-meta-value {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .cover-gradient-strip {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--grad-h);
+    }
+
+    /* ── SECTIONS ───────────────────────────────────────────────── */
+    .section {
+      padding: 72px 80px;
+      border-bottom: 1px solid var(--mgray);
+    }
+
+    .section:nth-child(even) { background: var(--white); }
+    .section:nth-child(odd)  { background: #FAFAFA; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .section-num {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--coral);
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--charcoal);
+    }
+
+    .section-rule {
+      height: 3px;
+      background: var(--gradient);
+      margin-bottom: 48px;
+      border-radius: 2px;
+    }
+
+    .section-intro {
+      font-size: 15px;
+      font-style: italic;
+      color: var(--dgray);
+      margin-bottom: 40px;
+      max-width: 680px;
+      line-height: 1.7;
+    }
+
+    /* ── SUB-HEADER ─────────────────────────────────────────────── */
+    .sub-header {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--sunset);
+      margin: 48px 0 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--mgray);
+    }
+
+    .sub-header:first-of-type { margin-top: 0; }
+
+    /* ── LABEL-FIELD ROWS ───────────────────────────────────────── */
+    .field-grid {
+      display: grid;
+      gap: 1px;
+      background: var(--mgray);
+      border: 1px solid var(--mgray);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      background: var(--white);
+    }
+
+    .field-label {
+      background: #F0F0F0;
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+    }
+
+    .field-value {
+      background: var(--white);
+      padding: 12px 16px;
+      font-size: 14px;
+      color: var(--charcoal);
+      line-height: 1.5;
+    }
+
+    .field-value.placeholder {
+      color: #AAAAAA;
+      font-style: italic;
+    }
+
+    .field-value code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 12px;
+      background: var(--lgray);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--sunset);
+      word-break: break-all;
+    }
+
+    /* ── TABLES ─────────────────────────────────────────────────── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--mgray);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .data-table thead tr {
+      background: var(--charcoal);
+      color: var(--white);
+    }
+
+    .data-table thead th {
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .data-table tbody tr:nth-child(even) { background: var(--lgray); }
+    .data-table tbody tr:nth-child(odd)  { background: var(--white); }
+    .data-table tbody tr:hover { background: var(--cream); }
+
+    .data-table tbody td {
+      padding: 11px 16px;
+      border-top: 1px solid var(--mgray);
+      color: var(--charcoal);
+      line-height: 1.5;
+      vertical-align: top;
+    }
+
+    .data-table tbody td:first-child {
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    /* ── DO / DON'T TABLE ───────────────────────────────────────── */
+    .dd-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--mgray);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .dd-table .dd-head-do {
+      background: #1a4d1a;
+      color: var(--white);
+      padding: 12px 16px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      width: 50%;
+    }
+
+    .dd-table .dd-head-dont {
+      background: #6b1414;
+      color: var(--white);
+      padding: 12px 16px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .dd-table td {
+      padding: 11px 16px;
+      border-top: 1px solid var(--mgray);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .dd-table tr:nth-child(even) td:first-child { background: #f5fff5; }
+    .dd-table tr:nth-child(odd) td:first-child  { background: var(--white); }
+    .dd-table tr:nth-child(even) td:last-child  { background: #fff5f5; }
+    .dd-table tr:nth-child(odd) td:last-child   { background: #fff0ec; }
+
+    /* ── COLOR SWATCHES ─────────────────────────────────────────── */
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .swatch-card {
+      border: 1px solid var(--mgray);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .swatch-color {
+      height: 120px;
+      width: 100%;
+    }
+
+    .swatch-info {
+      padding: 14px 16px;
+      background: var(--lgray);
+    }
+
+    .swatch-name {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+
+    .swatch-hex {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 2px;
+    }
+
+    .swatch-vals {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 6px;
+    }
+
+    .swatch-role {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--coral);
+    }
+
+    .swatch-usage {
+      font-size: 12px;
+      font-style: italic;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* Gradient swatch */
+    .swatch-gradient {
+      height: 120px;
+      width: 100%;
+      background: var(--gradient);
+    }
+
+    /* ── GRADIENT SPEC BOX ──────────────────────────────────────── */
+    .gradient-strip {
+      height: 48px;
+      background: var(--gradient);
+      border-radius: 8px;
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .gradient-strip span {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--charcoal);
+      letter-spacing: 0.05em;
+    }
+
+    .gradient-strip .arrow {
+      color: rgba(0,0,0,0.25);
+      font-size: 18px;
+    }
+
+    /* ── CALLOUT BOX ────────────────────────────────────────────── */
+    .callout {
+      background: var(--cream);
+      border-left: 4px solid var(--coral);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--charcoal);
+    }
+
+    .callout code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 12px;
+      background: rgba(0,0,0,0.06);
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: var(--sunset);
+    }
+
+    .callout.warning {
+      border-left-color: var(--sunset);
+      background: #fff3f3;
+    }
+
+    /* ── COMMANDMENTS BOX ───────────────────────────────────────── */
+    .commandments {
+      background: var(--charcoal);
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+
+    .commandments-header {
+      background: var(--black);
+      padding: 14px 24px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      /* fallback for non-webkit */
+      color: var(--yellow);
+    }
+
+    .commandments-list {
+      list-style: none;
+    }
+
+    .commandments-list li {
+      padding: 11px 24px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      line-height: 1.5;
+    }
+
+    .commandments-list li:nth-child(even) {
+      background: rgba(255,255,255,0.02);
+    }
+
+    .commandments-list li strong {
+      color: var(--yellow);
+    }
+
+    /* ── MANIFESTO QUOTE ────────────────────────────────────────── */
+    .manifesto {
+      text-align: center;
+      padding: 48px 40px;
+      background: var(--cream);
+      border-radius: 12px;
+      margin: 32px 0;
+      border: 1px solid rgba(255,126,95,0.2);
+      position: relative;
+    }
+
+    .manifesto::before,
+    .manifesto::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 4px;
+      background: var(--gradient);
+      border-radius: 2px;
+    }
+
+    .manifesto::before { left: 0; }
+    .manifesto::after  { right: 0; }
+
+    .manifesto blockquote {
+      font-size: 22px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .manifesto cite {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sunset);
+      font-style: normal;
+    }
+
+    /* ── TYPE SPECIMEN ──────────────────────────────────────────── */
+    .type-specimen {
+      background: var(--lgray);
+      border-radius: 10px;
+      padding: 32px;
+      margin: 20px 0;
+    }
+
+    .spec-display {
+      font-size: 60px;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .spec-h1 {
+      font-size: 36px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+
+    .spec-h2 {
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sunset);
+      margin-bottom: 6px;
+    }
+
+    .spec-h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+
+    .spec-body {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--charcoal);
+      line-height: 1.65;
+      margin-bottom: 8px;
+      max-width: 520px;
+    }
+
+    .spec-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--coral);
+      margin-bottom: 16px;
+    }
+
+    .spec-caption {
+      font-size: 12px;
+      color: #888;
+    }
+
+    /* ── TONE COMPARE ───────────────────────────────────────────── */
+    .tone-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--mgray);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .tone-head {
+      padding: 12px 20px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .tone-head.yes { background: var(--charcoal); color: var(--yellow); }
+    .tone-head.no  { background: #444; color: rgba(255,255,255,0.4); }
+
+    .tone-row {
+      display: contents;
+    }
+
+    .tone-row .tone-yes,
+    .tone-row .tone-no {
+      padding: 13px 20px;
+      font-size: 14px;
+      border-top: 1px solid var(--mgray);
+      line-height: 1.5;
+    }
+
+    .tone-row .tone-yes {
+      background: var(--white);
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    .tone-row .tone-no {
+      background: var(--lgray);
+      color: #888;
+      font-style: italic;
+      text-decoration: line-through;
+      text-decoration-color: var(--coral);
+    }
+
+    .tone-row:nth-child(even) .tone-yes { background: var(--cream); }
+    .tone-row:nth-child(even) .tone-no  { background: #f5f5f5; }
+
+    /* ── ACCESS / CONTRAST BADGES ───────────────────────────────── */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .badge.pass  { background: #e6f4ea; color: #1a6b2a; }
+    .badge.fail  { background: #fce8e6; color: #8b1a1a; }
+    .badge.check { background: var(--cream); color: var(--coral); }
+
+    /* ── FOOTER ─────────────────────────────────────────────────── */
+    .doc-footer {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 32px 80px;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      margin-left: 0;
+    }
+
+    /* ── UTILITY ────────────────────────────────────────────────── */
+    .mt-sm { margin-top: 16px; }
+    .mt-md { margin-top: 28px; }
+    .mt-lg { margin-top: 48px; }
+    .mb-sm { margin-bottom: 16px; }
+    .body-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+    .accent { color: var(--sunset); font-weight: 700; }
+    .muted  { color: var(--dgray); font-size: 13px; font-style: italic; }
+
+    @media print {
+      .sidebar { display: none; }
+      .main { margin-left: 0; }
+      .section { padding: 40px; }
+      .cover { padding: 60px 40px; min-height: auto; }
+    }
+
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .main { margin-left: 0; }
+      .section { padding: 48px 24px; }
+      .cover { padding: 60px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SIDEBAR
+═══════════════════════════════════════════════════════════════════ -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <span>HOT GIRLS<br>DONT WORK</span>
+  </div>
+  <div class="sidebar-label">Brand & Design Brief</div>
+  <nav>
+    <a href="#cover">Cover</a>
+    <a href="#s1">01 — Brand Overview</a>
+    <a href="#s2">02 — Logo System</a>
+    <a href="#s3">03 — Color System</a>
+    <a href="#s4">04 — Typography</a>
+    <a href="#s5">05 — Imagery</a>
+    <a href="#s6">06 — Design Templates</a>
+    <a href="#s7">07 — Brand Applications</a>
+    <a href="#s8">08 — Layout & Spacing</a>
+    <a href="#s9">09 — Governance</a>
+    <a href="#s10">10 — Quick Reference</a>
+  </nav>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     MAIN
+═══════════════════════════════════════════════════════════════════ -->
+<div class="main">
+
+  <!-- COVER -->
+  <div class="cover" id="cover">
+    <div class="cover-eyebrow">Brand &amp; Design Brief — Confidential</div>
+    <h1 class="cover-title">Hot Girls<br>Dont Work</h1>
+    <div class="cover-subtitle">Brand &amp; Design Brief</div>
+    <div class="cover-rule"></div>
+    <p class="cover-tagline">WE USE AI. WORK LESS, EARN MORE, BE HOT.</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Version</span>
+        <span class="cover-meta-value">v1.0</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Date</span>
+        <span class="cover-meta-value">March 2026</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Owner</span>
+        <span class="cover-meta-value">Courtney Murtha</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">Status</span>
+        <span class="cover-meta-value">Pre-launch</span>
+      </div>
+    </div>
+    <div class="cover-gradient-strip"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════
+       01 — BRAND OVERVIEW
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="s1">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Brand Overview</h2>
+    </div>
+    <div class="section-rule"></div>
+
+    <h3 class="sub-header">Brand Identity</h3>
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">Brand Name</div><div class="field-value"><strong>HOT GIRLS DONT WORK</strong></div></div>
+      <div class="field-row"><div class="field-label">Tagline</div><div class="field-value">WE USE AI. WORK LESS, EARN MORE, BE HOT.</div></div>
+      <div class="field-row"><div class="field-label">Website</div><div class="field-value">hotgirlsdontwork.com</div></div>
+      <div class="field-row"><div class="field-label">Parent Company</div><div class="field-value">Fertile World</div></div>
+      <div class="field-row"><div class="field-label">Founded</div><div class="field-value">2026</div></div>
+      <div class="field-row"><div class="field-label">Stage</div><div class="field-value">Pre-launch / Beta — 83 signups as of Q1 2026</div></div>
+    </div>
+
+    <h3 class="sub-header">Mission Statement</h3>
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">Mission</div><div class="field-value placeholder">[Fill in: What is the core purpose of HGDW in one sentence?]</div></div>
+    </div>
+
+    <h3 class="sub-header">Brand Positioning</h3>
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">Category</div><div class="field-value">Digital education / AI &amp; automation for women</div></div>
+      <div class="field-row"><div class="field-label">Point of Difference</div><div class="field-value placeholder">[What makes HGDW different from every other AI or business course?]</div></div>
+      <div class="field-row"><div class="field-label">Brand Promise</div><div class="field-value placeholder">[What does HGDW guarantee the customer will feel or achieve?]</div></div>
+    </div>
+
+    <h3 class="sub-header">Brand Archetypes</h3>
+    <table class="data-table">
+      <thead><tr><th>Archetype</th><th>Core Essence</th><th>Apply?</th></tr></thead>
+      <tbody>
+        <tr><td>The Creator</td><td>Build beauty, vision, originality</td><td><span class="accent">PRIMARY</span></td></tr>
+        <tr><td>The Ruler</td><td>Control, ownership, mastery</td><td>Secondary</td></tr>
+        <tr><td>The Jester</td><td>Joy, playfulness, irreverence</td><td>Secondary</td></tr>
+        <tr><td>The Lover</td><td>Beauty, sensuality, intimacy</td><td>Consider</td></tr>
+        <tr><td>The Explorer</td><td>Freedom, adventure, authenticity</td><td>Consider</td></tr>
+        <tr><td>The Sage</td><td>Truth, wisdom, expertise</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Elevator Pitch</h3>
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">One sentence</div><div class="field-value placeholder">[HGDW is a ___ that helps ___ do ___ so they can ___.]</div></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       02 — LOGO SYSTEM
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="s2">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Logo System</h2>
+    </div>
+    <div class="section-rule"></div>
+    <p class="section-intro">The logo is the most protected asset of the brand. HGDW has two marks: an abbreviation box mark (HGDW) and a full wordmark (HOT GIRLS DONT WORK) in horizontal and stacked layouts. Follow these rules without exception.</p>
+
+    <!-- LIVE LOGO PREVIEWS -->
+    <h3 class="sub-header">Live Logo Previews</h3>
+    <p class="body-text">All logos use <strong>Albert Sans Bold, ALL CAPS</strong>. The box border is a core design element of the HGDW mark — always rectangular, never rounded.</p>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px;">
+
+      <!-- HGDW Box Mark — Gradient BG + White -->
+      <div style="border-radius:10px; overflow:hidden; border:1px solid var(--mgray);">
+        <div style="background: linear-gradient(90deg,#FFD56B,#FF7E5F,#FF5263); padding: 32px; display:flex; align-items:center; justify-content:center;">
+          <div style="border: 3px solid white; padding: 12px 20px;">
+            <span style="font-family:'Albert Sans',Arial,sans-serif; font-size:40px; font-weight:800; color:white; letter-spacing:0.05em; text-transform:uppercase;">HGDW</span>
+          </div>
+        </div>
+        <div style="background:var(--lgray); padding:10px 14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--charcoal); text-transform:uppercase; letter-spacing:0.08em;">Box Mark — White on Gradient</div>
+          <div style="font-size:12px; color:#777; margin-top:2px;">Primary use — light-to-mid backgrounds</div>
+        </div>
+      </div>
+
+      <!-- HGDW Box Mark — Gradient BG + Black -->
+      <div style="border-radius:10px; overflow:hidden; border:1px solid var(--mgray);">
+        <div style="background: linear-gradient(90deg,#FFD56B,#FF7E5F,#FF5263); padding: 32px; display:flex; align-items:center; justify-content:center;">
+          <div style="border: 3px solid black; padding: 12px 20px;">
+            <span style="font-family:'Albert Sans',Arial,sans-serif; font-size:40px; font-weight:800; color:black; letter-spacing:0.05em; text-transform:uppercase;">HGDW</span>
+          </div>
+        </div>
+        <div style="background:var(--lgray); padding:10px 14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--charcoal); text-transform:uppercase; letter-spacing:0.08em;">Box Mark — Black on Gradient</div>
+          <div style="font-size:12px; color:#777; margin-top:2px;">Maximum contrast on gradient background</div>
+        </div>
+      </div>
+
+      <!-- HGDW Box Mark — Black BG + White -->
+      <div style="border-radius:10px; overflow:hidden; border:1px solid var(--mgray);">
+        <div style="background: #000; padding: 32px; display:flex; align-items:center; justify-content:center;">
+          <div style="border: 3px solid white; padding: 12px 20px;">
+            <span style="font-family:'Albert Sans',Arial,sans-serif; font-size:40px; font-weight:800; color:white; letter-spacing:0.05em; text-transform:uppercase;">HGDW</span>
+          </div>
+        </div>
+        <div style="background:var(--lgray); padding:10px 14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--charcoal); text-transform:uppercase; letter-spacing:0.08em;">Box Mark — White on Black</div>
+          <div style="font-size:12px; color:#777; margin-top:2px;">Dark background / reversed use</div>
+        </div>
+      </div>
+
+      <!-- HGDW Box Mark — Black BG + Gradient -->
+      <div style="border-radius:10px; overflow:hidden; border:1px solid var(--mgray);">
+        <div style="background: #000; padding: 32px; display:flex; align-items:center; justify-content:center;">
+          <div style="border: 3px solid transparent; border-image: linear-gradient(90deg,#FFD56B,#FF7E5F,#FF5263) 1; padding: 12px 20px;">
+            <span style="font-family:'Albert Sans',Arial,sans-serif; font-size:40px; font-weight:800; background: linear-gradient(90deg,#FFD56B,#FF7E5F,#FF5263); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; letter-spacing:0.05em; text-transform:uppercase;">HGDW</span>
+          </div>
+        </div>
+        <div style="background:var(--lgray); padding:10px 14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--charcoal); text-transform:uppercase; letter-spacing:0.08em;">Box Mark — Gradient on Black</div>
+          <div style="font-size:12px; color:#777; margin-top:2px;">Premium / featured dark background use</div>
+        </div>
+      </div>
+
+      <!-- Full Wordmark — White on Gradient (horizontal) -->
+      <div style="border-radius:10px; overflow:hidden; border:1px solid var(--mgray); grid-column: 1 / -1;">
+        <div style="background: linear-gradient(90deg,#FFD56B,#FF7E5F,#FF5263); padding: 24px 32px; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Albert Sans',Arial,sans-serif; font-size:36px; font-weight:800; color:white; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;">HOT GIRLS DONT WORK</span>
+        </div>
+        <div style="background:var(--lgray); padding:10px 14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--charcoal); text-transform:uppercase; letter-spacing:0.08em;">Full Wordmark — White on Gradient (Horizontal)</div>
+          <div style="font-size:12px; color:#777; margin-top:2px;">Primary wordmark — banners, headers, social</div>
+        </div>
+      </div>
+
+      <!-- Full Wordmark — Black on Gradient (horizontal) -->
+      <div style="border-radius:10px; overflow:hidden; border:1px solid var(--mgray); grid-column: 1 / -1;">
+        <div style="background: linear-gradient(90deg,#FFD56B,#FF7E5F,#FF5263); padding: 24px 32px; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Albert Sans',Arial,sans-serif; font-size:36px; font-weight:800; color:black; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;">HOT GIRLS DONT WORK</span>
+        </div>
+        <div style="background:var(--lgray); padding:10px 14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--charcoal); text-transform:uppercase; letter-spacing:0.08em;">Full Wordmark — Black on Gradient (Horizontal)</div>
+          <div style="font-size:12px; color:#777; margin-top:2px;">Alternate horizontal — strong contrast version</div>
+        </div>
+      </div>
+
+      <!-- Full Wordmark — Gradient on Black (horizontal) -->
+      <div style="border-radius:10px; overflow:hidden; border:1px solid var(--mgray); grid-column: 1 / -1;">
+        <div style="background: #000; padding: 24px 32px; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Albert Sans',Arial,sans-serif; font-size:36px; font-weight:800; background: linear-gradient(90deg,#FFD56B,#FF7E5F,#FF5263); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap;">HOT GIRLS DONT WORK</span>
+        </div>
+        <div style="background:var(--lgray); padding:10px 14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--charcoal); text-transform:uppercase; letter-spacing:0.08em;">Full Wordmark — Gradient on Black (Horizontal)</div>
+          <div style="font-size:12px; color:#777; margin-top:2px;">Premium dark variant — website hero, event use</div>
+        </div>
+      </div>
+
+      <!-- Stacked Wordmark — Black on Gradient -->
+      <div style="border-radius:10px; overflow:hidden; border:1px solid var(--mgray);">
+        <div style="background: linear-gradient(135deg,#FFD56B,#FF7E5F,#FF5263); padding: 32px; display:flex; align-items:center; justify-content:center; min-height:220px;">
+          <span style="font-family:'Albert Sans',Arial,sans-serif; font-size:52px; font-weight:800; color:black; letter-spacing:0.04em; text-transform:uppercase; line-height:1.05; text-align:center;">HOT<br>GIRLS<br>DONT<br>WORK</span>
+        </div>
+        <div style="background:var(--lgray); padding:10px 14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--charcoal); text-transform:uppercase; letter-spacing:0.08em;">Stacked Wordmark — Black on Gradient</div>
+          <div style="font-size:12px; color:#777; margin-top:2px;">Square format — Instagram, profile, covers</div>
+        </div>
+      </div>
+
+      <!-- Stacked Wordmark — Dark Gray on Gradient -->
+      <div style="border-radius:10px; overflow:hidden; border:1px solid var(--mgray);">
+        <div style="background: linear-gradient(135deg,#FFD56B,#FF7E5F,#FF5263); padding: 32px; display:flex; align-items:center; justify-content:center; min-height:220px;">
+          <span style="font-family:'Albert Sans',Arial,sans-serif; font-size:52px; font-weight:800; color:#4A4A4A; letter-spacing:0.04em; text-transform:uppercase; line-height:1.05; text-align:center;">HOT<br>GIRLS<br>DONT<br>WORK</span>
+        </div>
+        <div style="background:var(--lgray); padding:10px 14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--charcoal); text-transform:uppercase; letter-spacing:0.08em;">Stacked Wordmark — Dark Gray on Gradient</div>
+          <div style="font-size:12px; color:#777; margin-top:2px;">Softer stacked variant — editorial use</div>
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="sub-header">Logo Assets — File List</h3>
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">Typeface</div><div class="field-value"><strong>Albert Sans Bold — ALL CAPS throughout</strong></div></div>
+      <div class="field-row"><div class="field-label">Design Element</div><div class="field-value">Rectangular border box — straight corners, consistent stroke weight. This is a core part of the HGDW mark, not optional decoration.</div></div>
+      <div class="field-row"><div class="field-label">Asset Folder</div><div class="field-value placeholder">[Link: Google Drive / Dropbox / Figma]</div></div>
+    </div>
+
+    <table class="data-table" style="margin-top:16px;">
+      <thead><tr><th>Mark</th><th>Variant</th><th>File Name</th><th>Use On</th></tr></thead>
+      <tbody>
+        <tr><td>HGDW Box Mark</td><td>White text + border on gradient</td><td>hgdw-box-white-gradient.svg</td><td>Primary use — light or gradient backgrounds</td></tr>
+        <tr><td>HGDW Box Mark</td><td>Black text + border on gradient</td><td>hgdw-box-black-gradient.svg</td><td>Maximum contrast on gradient</td></tr>
+        <tr><td>HGDW Box Mark</td><td>Dark gray text + border on gradient</td><td>hgdw-box-gray-gradient.svg</td><td>Editorial / softer gradient applications</td></tr>
+        <tr><td>HGDW Box Mark</td><td>White text + border on black</td><td>hgdw-box-white-black.svg</td><td>Dark backgrounds, reversed use</td></tr>
+        <tr><td>HGDW Box Mark</td><td>Gradient text + gradient border on black</td><td>hgdw-box-gradient-black.svg</td><td>Premium / featured dark applications</td></tr>
+        <tr><td>Full Wordmark</td><td>White on gradient (horizontal)</td><td>hgdw-wordmark-white-gradient.svg</td><td>Banners, headers, social covers</td></tr>
+        <tr><td>Full Wordmark</td><td>Black on gradient (horizontal)</td><td>hgdw-wordmark-black-gradient.svg</td><td>Alternate — high contrast horizontal</td></tr>
+        <tr><td>Full Wordmark</td><td>Dark gray on gradient (horizontal)</td><td>hgdw-wordmark-gray-gradient.svg</td><td>Softer horizontal use</td></tr>
+        <tr><td>Full Wordmark</td><td>Gradient text on black (horizontal)</td><td>hgdw-wordmark-gradient-black.svg</td><td>Website hero, event signage, dark contexts</td></tr>
+        <tr><td>Stacked Wordmark</td><td>Black on gradient</td><td>hgdw-stacked-black-gradient.svg</td><td>Square formats — Instagram, covers, thumbnails</td></tr>
+        <tr><td>Stacked Wordmark</td><td>Dark gray on gradient</td><td>hgdw-stacked-gray-gradient.svg</td><td>Editorial square use</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Brand Gradient</h3>
+    <p class="body-text">The gradient runs <strong>left to right</strong> — warm yellow (#FFD56B) to coral (#FF7E5F) to deep sunset pink (#FF5263). In square/stacked layouts it runs diagonally top-left to bottom-right. The direction always tracks warm-to-pink. Never reversed.</p>
+
+    <div class="gradient-strip">
+      <span>#FFD56B — Yellow (start)</span>
+      <span class="arrow">→</span>
+      <span>#FF7E5F — Coral (mid)</span>
+      <span class="arrow">→</span>
+      <span>#FF5263 — Sunset (end)</span>
+    </div>
+
+    <div class="callout">
+      <strong>Gradient CSS — Horizontal (primary):</strong><br>
+      <code>linear-gradient(90deg, #FFD56B 0%, #FF7E5F 50%, #FF5263 100%)</code><br><br>
+      <strong>Gradient CSS — Diagonal (square/stacked):</strong><br>
+      <code>linear-gradient(135deg, #FFD56B 0%, #FF7E5F 50%, #FF5263 100%)</code><br><br>
+      Direction always warm-to-pink. Never reverse to pink-to-warm.
+    </div>
+
+    <h3 class="sub-header">Clear Space Rule</h3>
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">Minimum Clear Space</div><div class="field-value">X = cap-height of the 'H' in the wordmark on all sides. Nothing intrudes into this zone.</div></div>
+      <div class="field-row"><div class="field-label">Min Size (Digital)</div><div class="field-value">40px height minimum for the box mark / wordmark</div></div>
+      <div class="field-row"><div class="field-label">Min Size (Print)</div><div class="field-value">1 inch / 25mm height minimum</div></div>
+    </div>
+
+    <h3 class="sub-header">Which Mark to Use When</h3>
+    <table class="data-table">
+      <thead><tr><th>Touchpoint</th><th>Mark</th><th>Variant</th></tr></thead>
+      <tbody>
+        <tr><td>Website header / nav</td><td>HGDW Box Mark</td><td>White on gradient, or gradient on dark</td></tr>
+        <tr><td>Instagram feed (square post)</td><td>Stacked Wordmark or Box Mark</td><td>White on gradient — bottom corner or centered</td></tr>
+        <tr><td>Instagram / TikTok banner</td><td>Full Wordmark (horizontal)</td><td>White on gradient</td></tr>
+        <tr><td>TikTok / Reels overlay</td><td>Box Mark or Wordmark</td><td>White on gradient — lower third, small</td></tr>
+        <tr><td>Email header</td><td>Full Wordmark (horizontal)</td><td>White or black on gradient background</td></tr>
+        <tr><td>Presentation cover</td><td>Full Wordmark (horizontal) or Stacked</td><td>Gradient on black — premium dark layout</td></tr>
+        <tr><td>Course materials / PDFs</td><td>Box Mark or Wordmark (horizontal)</td><td>Black on white (print-safe)</td></tr>
+        <tr><td>Merchandise</td><td>Stacked Wordmark or Box Mark</td><td>Gradient or single-color — depends on print method</td></tr>
+        <tr><td>Event signage / step-and-repeat</td><td>Full Wordmark (horizontal)</td><td>Gradient on black or white on gradient</td></tr>
+        <tr><td>App icon / favicon</td><td>HGDW Box Mark</td><td>White on gradient — square crop</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Logo Dos &amp; Don'ts</h3>
+    <table class="dd-table">
+      <thead><tr><th class="dd-head-do">✓ DO</th><th class="dd-head-dont">✗ DON'T</th></tr></thead>
+      <tbody>
+        <tr><td>Use approved SVG/PNG files only — never recreate</td><td>Stretch, squish, rotate, or distort in any way</td></tr>
+        <tr><td>Maintain the rectangular box border on the HGDW mark — exact stroke weight</td><td>Round the corners of the box border</td></tr>
+        <tr><td>Use gradient version on white, cream, or neutral backgrounds</td><td>Place the gradient logo on a gradient background</td></tr>
+        <tr><td>Use reversed white on dark or photographic backgrounds</td><td>Add drop shadows, glows, outlines, or effects</td></tr>
+        <tr><td>Keep clear space zone on all sides at all times</td><td>Crowd the logo with text, icons, or other elements</td></tr>
+        <tr><td>Use gradient-on-black for premium, dark-background applications</td><td>Use unapproved colors or recreate in another font</td></tr>
+        <tr><td>Use black-on-gradient for maximum contrast when needed</td><td>Add an apostrophe to DONT — ever, anywhere</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout warning">
+      <strong>NON-NEGOTIABLE:</strong> The brand is always written <strong style="color:#FF5263">HOT GIRLS DONT WORK</strong> — <strong>DONT has no apostrophe. Ever.</strong> This is intentional and is part of the brand identity. Applies everywhere: headlines, copy, URLs, social, email, AI prompts, legal documents, signage.
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       03 — COLOR SYSTEM
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="s3">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Color System</h2>
+    </div>
+    <div class="section-rule"></div>
+    <p class="section-intro">The HGDW palette is built around a warm sunset gradient — three colors that always move together: yellow to coral to pink.</p>
+
+    <h3 class="sub-header">The Brand Gradient — Primary Palette</h3>
+    <p class="body-text">These three colors define the HGDW visual identity. They are always used together as a gradient or in sequence. Never isolated arbitrarily.</p>
+
+    <div class="swatch-grid">
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#FFD56B;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">HGDW Yellow</div>
+          <div class="swatch-hex">#FFD56B</div>
+          <div class="swatch-vals">RGB: 255, 213, 107 &nbsp;|&nbsp; CMYK: 0, 16, 58, 0</div>
+          <div class="swatch-role">HOTSPOT — Gradient Center</div>
+          <div class="swatch-usage">Warm highlight, fills, backgrounds</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#FF7E5F;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">HGDW Coral</div>
+          <div class="swatch-hex">#FF7E5F</div>
+          <div class="swatch-vals">RGB: 255, 126, 95 &nbsp;|&nbsp; CMYK: 0, 51, 63, 0</div>
+          <div class="swatch-role">MIDTONE — Gradient Middle</div>
+          <div class="swatch-usage">Transitions, buttons, icon fills</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#FF5263;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">HGDW Sunset</div>
+          <div class="swatch-hex">#FF5263</div>
+          <div class="swatch-vals">RGB: 255, 82, 99 &nbsp;|&nbsp; CMYK: 0, 68, 61, 0</div>
+          <div class="swatch-role">EDGES — Primary Accent</div>
+          <div class="swatch-usage">CTAs, borders, headings, rules</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-header">Gradient Specifications</h3>
+    <table class="data-table">
+      <thead><tr><th>Use</th><th>CSS Value</th><th>Direction</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Horizontal (primary)</strong></td><td><code>linear-gradient(90deg, #FFD56B 0%, #FF7E5F 50%, #FF5263 100%)</code></td><td>Left → right — banners, wordmarks, headers</td></tr>
+        <tr><td>Diagonal (square/stacked)</td><td><code>linear-gradient(135deg, #FFD56B 0%, #FF7E5F 50%, #FF5263 100%)</code></td><td>Top-left → bottom-right — square formats, covers</td></tr>
+        <tr><td>Vertical</td><td><code>linear-gradient(180deg, #FFD56B 0%, #FF7E5F 50%, #FF5263 100%)</code></td><td>Top → bottom — tall banners, story backgrounds</td></tr>
+        <tr><td>Radial (hotspot center)</td><td><code>radial-gradient(circle, #FFD56B 0%, #FF7E5F 50%, #FF5263 100%)</code></td><td>Circular burst — special hero applications</td></tr>
+        <tr><td>Text gradient (web)</td><td><code>background: linear-gradient(90deg,...); -webkit-background-clip: text;</code></td><td>Headline text only — never body copy</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Supporting Palette</h3>
+    <p class="body-text">These neutrals work alongside the gradient to provide breathing room, text clarity, and structural contrast.</p>
+    <div class="swatch-grid">
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#000000;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Black</div>
+          <div class="swatch-hex">#000000</div>
+          <div class="swatch-vals">RGB: 0, 0, 0</div>
+          <div class="swatch-role">PRIMARY NEUTRAL</div>
+          <div class="swatch-usage">Primary text, dark backgrounds</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#1C1C1E;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Charcoal</div>
+          <div class="swatch-hex">#1C1C1E</div>
+          <div class="swatch-vals">RGB: 28, 28, 30</div>
+          <div class="swatch-role">BODY TEXT</div>
+          <div class="swatch-usage">All body copy, headings on light BG</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#FFFFFF; border: 1px solid #E0E0E0;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">White</div>
+          <div class="swatch-hex">#FFFFFF</div>
+          <div class="swatch-vals">RGB: 255, 255, 255</div>
+          <div class="swatch-role">CLEAN SPACE</div>
+          <div class="swatch-usage">Backgrounds, reversed text</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub-header">60/30/10 Color Usage Rule</h3>
+    <table class="data-table">
+      <thead><tr><th>Role</th><th>Color</th><th>Usage</th></tr></thead>
+      <tbody>
+        <tr><td>Dominant — 60%</td><td>Black, Charcoal, or White</td><td>The foundation of every layout</td></tr>
+        <tr><td>Secondary — 30%</td><td>White or light warm neutral</td><td>Breathing room and structural support</td></tr>
+        <tr><td>Accent — 10%</td><td><strong style="color:#FF5263">Brand gradient (#FFD56B → #FF7E5F → #FF5263)</strong></td><td>Maximum energy — never overwhelming</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Accessibility — Contrast Combinations</h3>
+    <table class="data-table">
+      <thead><tr><th>Text Color</th><th>Background</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Charcoal #1C1C1E</td><td>White #FFFFFF</td><td><span class="badge pass">PASS</span></td></tr>
+        <tr><td>White #FFFFFF</td><td>Black #000000</td><td><span class="badge pass">PASS</span></td></tr>
+        <tr><td>White #FFFFFF</td><td>Sunset #FF5263</td><td><span class="badge pass">PASS</span> — CTAs</td></tr>
+        <tr><td>Charcoal #1C1C1E</td><td>Yellow #FFD56B</td><td><span class="badge pass">PASS</span> — warm backgrounds</td></tr>
+        <tr><td>White #FFFFFF</td><td>Yellow #FFD56B</td><td><span class="badge fail">FAIL</span> — never use</td></tr>
+        <tr><td>Sunset #FF5263</td><td>White #FFFFFF</td><td><span class="badge check">VERIFY</span> — check ratio</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       04 — TYPOGRAPHY
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="s4">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Typography</h2>
+    </div>
+    <div class="section-rule"></div>
+    <p class="section-intro">Typography is voice made visual. HGDW uses one typeface — Albert Sans — applied with purpose at every level of the hierarchy.</p>
+
+    <h3 class="sub-header">Brand Typeface — Albert Sans</h3>
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">Typeface</div><div class="field-value"><strong>Albert Sans</strong></div></div>
+      <div class="field-row"><div class="field-label">Source</div><div class="field-value">Google Fonts — free, open license (OFL 1.1) — fonts.google.com/specimen/Albert+Sans</div></div>
+      <div class="field-row"><div class="field-label">Designer</div><div class="field-value">Andreas Rasmussen</div></div>
+      <div class="field-row"><div class="field-label">Character</div><div class="field-value">Modern, geometric, clean — confident without being cold. Designed for display and body use alike.</div></div>
+      <div class="field-row"><div class="field-label">Google Fonts CSS</div><div class="field-value"><code>@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap')</code></div></div>
+      <div class="field-row"><div class="field-label">CSS Font Stack</div><div class="field-value"><code>font-family: 'Albert Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif</code></div></div>
+    </div>
+
+    <h3 class="sub-header">Type Specimen</h3>
+    <div class="type-specimen">
+      <div class="spec-display">HOT GIRLS<br>DONT WORK</div>
+      <div class="spec-caption" style="margin-bottom:24px;">Display — Albert Sans ExtraBold, ALL CAPS, 60–96px</div>
+
+      <div class="spec-h1">Section Heading — Albert Sans Bold, ALL CAPS</div>
+      <div class="spec-caption" style="margin-bottom:16px;">H1 — 48–64px</div>
+
+      <div class="spec-h2">Sub-heading — Albert Sans Bold, ALL CAPS</div>
+      <div class="spec-caption" style="margin-bottom:16px;">H2 — 32–40px, Sunset color</div>
+
+      <div class="spec-h3">Card Header — Albert Sans SemiBold, Title Case</div>
+      <div class="spec-caption" style="margin-bottom:16px;">H3 — 24–28px</div>
+
+      <div class="spec-body">Body copy is set in Albert Sans Regular, sentence case. Short sentences are the default — punchy, declarative, rhythmic. Longer sentences earn their length by landing a big idea. Em dashes for drama — just like this.</div>
+      <div class="spec-caption" style="margin-bottom:16px;">Body — 14–16px, Regular, line-height 1.6</div>
+
+      <div class="spec-label">Label / CTA / Tag — Albert Sans SemiBold, ALL CAPS</div>
+      <div class="spec-caption">Caption — 11–13px</div>
+    </div>
+
+    <h3 class="sub-header">Type Roles</h3>
+    <table class="data-table">
+      <thead><tr><th>Role</th><th>Style</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Logo / Brand Mark</td><td>Albert Sans Bold — ALL CAPS</td><td>The wordmark. Never in any other font.</td></tr>
+        <tr><td>Display / Hero Headline</td><td>Albert Sans Bold or ExtraBold — ALL CAPS</td><td>Campaign headlines, covers, section openers</td></tr>
+        <tr><td>H1 — Page Title</td><td>Albert Sans Bold — ALL CAPS</td><td>Page/slide headers</td></tr>
+        <tr><td>H2 — Section Header</td><td>Albert Sans SemiBold — ALL CAPS</td><td>Section breaks, major divisions</td></tr>
+        <tr><td>H3 — Sub-header</td><td>Albert Sans Medium or SemiBold — Title Case</td><td>Card headers, pull quotes</td></tr>
+        <tr><td>Body Copy</td><td>Albert Sans Regular — Sentence case</td><td>All body paragraphs, descriptions, captions</td></tr>
+        <tr><td>UI Labels / Buttons / CTAs</td><td>Albert Sans SemiBold — ALL CAPS</td><td>Navigation, tags, metadata, all calls to action</td></tr>
+        <tr><td>Fine Print / Legal</td><td>Albert Sans Regular — Sentence case, small</td><td>Disclaimers, footnotes, small labels</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Type Scale</h3>
+    <table class="data-table">
+      <thead><tr><th>Element</th><th>Size / Weight</th><th>Usage</th></tr></thead>
+      <tbody>
+        <tr><td>Display</td><td>72–96px / Bold or ExtraBold, ALL CAPS</td><td>Campaign covers, hero headlines</td></tr>
+        <tr><td>H1 — Page Title</td><td>48–64px / Bold, ALL CAPS</td><td>Page/slide headers</td></tr>
+        <tr><td>H2 — Section Header</td><td>32–40px / SemiBold, ALL CAPS</td><td>Section breaks, major divisions</td></tr>
+        <tr><td>H3 — Sub-header</td><td>24–28px / Medium or SemiBold, Title Case</td><td>Card headers, pull quotes</td></tr>
+        <tr><td>Body Large</td><td>18–20px / Regular, Sentence case</td><td>Intro paragraphs, featured copy</td></tr>
+        <tr><td>Body Regular</td><td>14–16px / Regular, Sentence case</td><td>Standard copy, descriptions</td></tr>
+        <tr><td>Caption / Label</td><td>11–13px / Medium, ALL CAPS or Sentence case</td><td>Tags, captions, metadata</td></tr>
+        <tr><td>Button / CTA</td><td>14–16px / SemiBold, ALL CAPS</td><td>All calls to action</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Typography Dos &amp; Don'ts</h3>
+    <table class="dd-table">
+      <thead><tr><th class="dd-head-do">✓ DO</th><th class="dd-head-dont">✗ DON'T</th></tr></thead>
+      <tbody>
+        <tr><td>Use Albert Sans exclusively — one typeface, applied with intention</td><td>Introduce a second typeface</td></tr>
+        <tr><td>Use ALL CAPS for logo, H1/H2, and UI labels</td><td>Use ALL CAPS for long paragraphs</td></tr>
+        <tr><td>Use sentence case for all body copy and H3+ headings</td><td>Center-align large blocks of body text</td></tr>
+        <tr><td>Use em dashes for dramatic pauses — like this</td><td>Justify body text (creates rivers of whitespace)</td></tr>
+        <tr><td>Short sentences. One idea per line where possible.</td><td>Use Albert Sans Thin or Light for headlines — too weak</td></tr>
+        <tr><td>Line height 1.4–1.6x for body copy</td><td>Mix caps styles within the same text block</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       05 — IMAGERY & PHOTOGRAPHY
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="s5">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2 class="section-title">Imagery &amp; Photography</h2>
+    </div>
+    <div class="section-rule"></div>
+    <p class="section-intro">Photography is how the brand feels before anyone reads a word. HGDW imagery is warm, aspirational, and alive — a life fully designed, not defaulted into.</p>
+
+    <h3 class="sub-header">Photography Mood</h3>
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">Overall feeling</div><div class="field-value">Warm, luminous, confident, unbothered — ease, not effort</div></div>
+      <div class="field-row"><div class="field-label">Lighting</div><div class="field-value">Natural or warm-toned artificial light. Soft shadows. No harsh flash or clinical brightness.</div></div>
+      <div class="field-row"><div class="field-label">Color grading</div><div class="field-value">Warm highlights, soft shadows, slightly golden tone — consistent with #FFD56B warmth</div></div>
+      <div class="field-row"><div class="field-label">Presets / Actions</div><div class="field-value placeholder">[Link to Lightroom preset — align warm tones to brand palette]</div></div>
+    </div>
+
+    <h3 class="sub-header">Lifestyle Photography Direction</h3>
+    <table class="data-table">
+      <thead><tr><th>Category</th><th>Shoot For This</th><th>Avoid This</th></tr></thead>
+      <tbody>
+        <tr><td>Environment</td><td>Home offices, outdoor cafes, travel, luminous spaces</td><td>Cubicles, generic stock backgrounds, corporate settings</td></tr>
+        <tr><td>Subject Mood</td><td>Confident, relaxed, joyful, unbothered — in flow</td><td>Stressed, rushed, performing happiness, overwhelmed</td></tr>
+        <tr><td>Color Palette</td><td>Warm tones echoing the brand gradient — golds, corals, peaches</td><td>Cold blues, harsh whites, desaturated gray palettes</td></tr>
+        <tr><td>Composition</td><td>Strong focal point, editorial framing, intentional negative space</td><td>Cluttered, no subject hierarchy, flat or literal</td></tr>
+        <tr><td>Wardrobe</td><td>Polished casual — she looks like her best self</td><td>Generic business casual, dated corporate looks</td></tr>
+        <tr><td>Devices</td><td>Laptop open, phone in hand — tools of agency, not chains</td><td>Buried in screens, tech-overwhelmed expressions</td></tr>
+        <tr><td>Representation</td><td>Real range: skin tones, ages 28–55, body types</td><td>Tokenism, stereotyping, homogenous casting</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Gradient Application Guide</h3>
+    <table class="data-table">
+      <thead><tr><th>Application</th><th>How</th><th>Avoid</th></tr></thead>
+      <tbody>
+        <tr><td>Text gradients</td><td>Headline text only — CSS gradient on text fill</td><td>Body copy — illegible at small sizes</td></tr>
+        <tr><td>Background fills</td><td>Gradient fill behind white text on featured sections</td><td>Behind light text in yellow zone — contrast fails</td></tr>
+        <tr><td>Borders / rules</td><td>Gradient or solid Sunset (#FF5263) strokes on dividers</td><td>Busy patterns that compete with content</td></tr>
+        <tr><td>Button fills</td><td>Gradient fill or solid #FF5263 with white text</td><td>Yellow #FFD56B buttons — text contrast fails</td></tr>
+        <tr><td>Photo overlays</td><td>Subtle gradient overlay at 20–40% opacity over images</td><td>Full-opacity gradient that obscures the photo</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Image Composition Rules</h3>
+    <table class="data-table">
+      <thead><tr><th>Rule</th><th>Requirement</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Text placement zone</td><td>Bottom third or top quarter reserved for text</td><td>Never on high-contrast busy areas</td></tr>
+        <tr><td>Overlay treatment</td><td>Dark or warm gradient overlay, 40–65% opacity</td><td>Warm-toned overlays stay on brand</td></tr>
+        <tr><td>Minimum contrast</td><td>WCAG AA — 4.5:1 ratio on all text over images</td><td>Test with contrast checker before publishing</td></tr>
+        <tr><td>Logo placement</td><td>Bottom-left or centered, min 40px height</td><td>Always on darkened or clear zone</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       06 — DESIGN TEMPLATES
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="s6">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2 class="section-title">Design Templates</h2>
+    </div>
+    <div class="section-rule"></div>
+    <p class="section-intro">Specs for every content format — from a TikTok cover to a course PDF — so everything looks unmistakably HGDW.</p>
+
+    <h3 class="sub-header">Instagram</h3>
+    <table class="data-table">
+      <thead><tr><th>Format</th><th>Dimensions</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Feed Post — Square</td><td>1080 × 1080 px</td><td>Primary format — most reliable across placements</td></tr>
+        <tr><td>Feed Post — Portrait</td><td>1080 × 1350 px</td><td>More feed real estate — best for engagement</td></tr>
+        <tr><td>Story / Reel Cover</td><td>1080 × 1920 px</td><td>Keep key content in center safe zone (250px from edges)</td></tr>
+        <tr><td>Carousel Slide</td><td>1080 × 1080 px</td><td>Slide 1 = hook with gradient accent. Consistent header style.</td></tr>
+        <tr><td>Profile Photo</td><td>320 × 320 px</td><td>Logo centered on gradient or brand color background</td></tr>
+        <tr><td>Highlight Cover</td><td>1080 × 1920 px</td><td>Icon centered, gradient or Sunset (#FF5263) background</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">TikTok &amp; Reels</h3>
+    <table class="data-table">
+      <thead><tr><th>Format</th><th>Dimensions</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Video</td><td>1080 × 1920 px (9:16)</td><td>Safe zone: keep content 250px from top and bottom edges</td></tr>
+        <tr><td>Cover Image</td><td>1080 × 1920 px</td><td>Strong editorial frame — readable at thumbnail size</td></tr>
+        <tr><td>On-screen text</td><td>Albert Sans SemiBold, ALL CAPS</td><td>High contrast, short lines, legible at 2× speed</td></tr>
+        <tr><td>Lower thirds</td><td>Albert Sans Regular, sentence case</td><td>Warm background pill or dark overlay bar</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Email Design</h3>
+    <table class="data-table">
+      <thead><tr><th>Element</th><th>Specification</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Email Width</td><td>600–650px max</td><td>Renders cleanly across all email clients</td></tr>
+        <tr><td>Header Image</td><td>600 × 200px</td><td>Gradient background with reversed white wordmark centered</td></tr>
+        <tr><td>Body Background</td><td>White #FFFFFF or warm cream #FFF8E7</td><td>Warm cream feels most on-brand</td></tr>
+        <tr><td>CTA Button</td><td>Gradient fill or Sunset #FF5263, white text, rounded corners</td><td>Minimum 44px height for mobile tap targets</td></tr>
+        <tr><td>Body Font</td><td>Albert Sans 16px / Regular + Arial fallback</td><td>Always include web-safe fallback for email</td></tr>
+        <tr><td>Footer</td><td>Black background, reversed white text, small logo + social icons</td><td>Consistent across all email sends</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Presentations (Decks)</h3>
+    <table class="data-table">
+      <thead><tr><th>Element</th><th>Specification</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Slide Dimensions</td><td>16:9 widescreen (1920 × 1080px)</td><td>Standard for Keynote, Google Slides, PowerPoint</td></tr>
+        <tr><td>Cover Slide</td><td>Full-bleed dark BG + gradient headline + tagline</td><td>Maximum design investment — sets the entire tone</td></tr>
+        <tr><td>Section Dividers</td><td>Full-bleed gradient fill + white ALL CAPS headline</td><td>Bold, dramatic transitions between sections</td></tr>
+        <tr><td>Content Slides</td><td>White or cream BG, charcoal body, gradient accents only</td><td>Max 3 ideas per slide — one message per layout</td></tr>
+        <tr><td>Data / Charts</td><td>Gradient palette: Yellow → Coral → Sunset for data</td><td>Primary data in Sunset #FF5263</td></tr>
+        <tr><td>Closing Slide</td><td>Brand name full-bleed + Manifesto line + website URL</td><td>Leave the room with the brand locked in</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Course &amp; PDF Materials</h3>
+    <table class="data-table">
+      <thead><tr><th>Element</th><th>Specification</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Page Size</td><td>US Letter (8.5 × 11") or A4</td><td>Letter for US audience</td></tr>
+        <tr><td>Margins</td><td>1 inch all sides minimum</td><td>Generous white space = premium feel</td></tr>
+        <tr><td>Header</td><td>Logo top-left + title centered + page number right</td><td>Consistent across all course materials</td></tr>
+        <tr><td>Body Font</td><td>Albert Sans 11–12pt / Regular / Charcoal #1C1C1E</td><td>Maximum readability on white</td></tr>
+        <tr><td>Headings</td><td>Albert Sans Bold / ALL CAPS / Sunset #FF5263</td><td>Match type scale from Section 04</td></tr>
+        <tr><td>Workbook fill boxes</td><td>Cream #FFF8E7 background, Coral #FF7E5F border</td><td>Generous line spacing — never cramped</td></tr>
+        <tr><td>Section covers</td><td>Full-bleed gradient + module name in white Albert Sans Bold</td><td>One cover per module</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       07 — BRAND APPLICATIONS
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="s7">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2 class="section-title">Brand Applications</h2>
+    </div>
+    <div class="section-rule"></div>
+
+    <h3 class="sub-header">Digital Touchpoints</h3>
+    <table class="data-table">
+      <thead><tr><th>Touchpoint</th><th>Priority</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td>Website / Landing Page</td><td><span class="accent">HIGH</span> — first impression for paid traffic</td><td class="placeholder">[Fill in]</td></tr>
+        <tr><td>Course Platform (Kajabi / etc.)</td><td><span class="accent">HIGH</span> — where learning and ROI happen</td><td class="placeholder">[Fill in]</td></tr>
+        <tr><td>Email (welcome, nurture, launch)</td><td><span class="accent">HIGH</span> — most direct line to audience</td><td class="placeholder">[Fill in]</td></tr>
+        <tr><td>Instagram</td><td><span class="accent">HIGH</span> — primary community building</td><td class="placeholder">[Fill in]</td></tr>
+        <tr><td>TikTok</td><td><span class="accent">HIGH</span> — top of funnel / brand awareness</td><td class="placeholder">[Fill in]</td></tr>
+        <tr><td>LinkedIn</td><td>MEDIUM — secondary, corporate outreach</td><td class="placeholder">[Fill in]</td></tr>
+        <tr><td>YouTube</td><td>LOW / FUTURE — long-form content</td><td class="placeholder">[Fill in]</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Physical &amp; Event Touchpoints</h3>
+    <table class="data-table">
+      <thead><tr><th>Touchpoint</th><th>Status</th><th>Design Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Event Signage / Step-and-Repeat</td><td class="placeholder">[Planned / TBD]</td><td>Gradient background, white wordmark prominent</td></tr>
+        <tr><td>Merch (t-shirts, hats, totes)</td><td class="placeholder">[Planned / TBD]</td><td>HOT GIRLS DONT WORK — Albert Sans Bold, gradient or single-color print</td></tr>
+        <tr><td>Printed Workbooks</td><td class="placeholder">[Planned / TBD]</td><td>Match course PDF spec above</td></tr>
+        <tr><td>Business Cards</td><td class="placeholder">[Planned / TBD]</td><td>Minimal — name, title, website, gradient accent strip</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Co-Brand Guidelines</h3>
+    <table class="dd-table">
+      <thead><tr><th class="dd-head-do">✓ DO</th><th class="dd-head-dont">✗ DON'T</th></tr></thead>
+      <tbody>
+        <tr><td>Maintain clear space between HGDW logo and partner logo</td><td>Allow a partner's brand to visually dominate HGDW</td></tr>
+        <tr><td>HGDW logo appears at equal or larger size than partner</td><td>Modify HGDW logo to match a partner's color palette</td></tr>
+        <tr><td>Use HGDW approved color variants on shared materials</td><td>Merge or overlap logos in any way</td></tr>
+        <tr><td>Get written approval before any co-branded asset is published</td><td>Create co-branded assets without founder sign-off</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       08 — LAYOUT & SPACING
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="s8">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2 class="section-title">Layout &amp; Spacing</h2>
+    </div>
+    <div class="section-rule"></div>
+    <p class="section-intro">Consistent spacing is invisible when done right — and immediately obvious when wrong.</p>
+
+    <h3 class="sub-header">Grid System</h3>
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">Base Unit</div><div class="field-value">8px — all spacing is a multiple of 8</div></div>
+      <div class="field-row"><div class="field-label">Page / Screen Margins</div><div class="field-value">Desktop: 80–120px &nbsp;|&nbsp; Mobile: 24–32px &nbsp;|&nbsp; Print: 1 inch</div></div>
+      <div class="field-row"><div class="field-label">Column Grid</div><div class="field-value">12-column for web &nbsp;|&nbsp; 4-column for mobile &nbsp;|&nbsp; 3-column for presentations</div></div>
+      <div class="field-row"><div class="field-label">Gutter Width</div><div class="field-value">24px default &nbsp;|&nbsp; 16px on mobile</div></div>
+    </div>
+
+    <h3 class="sub-header">Spacing Scale</h3>
+    <table class="data-table">
+      <thead><tr><th>Token</th><th>Value</th><th>Use For</th></tr></thead>
+      <tbody>
+        <tr><td>space-xs</td><td>4px</td><td>Micro spacing — icon padding, badge insets</td></tr>
+        <tr><td>space-s</td><td>8px</td><td>Tight element spacing — tag gaps, label pairs</td></tr>
+        <tr><td>space-m</td><td>16px</td><td>Default element spacing — form fields, list items</td></tr>
+        <tr><td>space-l</td><td>24px</td><td>Component spacing — card padding, section insets</td></tr>
+        <tr><td>space-xl</td><td>32px</td><td>Section breathing room — between content blocks</td></tr>
+        <tr><td>space-2xl</td><td>48px</td><td>Major section separation</td></tr>
+        <tr><td>space-3xl</td><td>64–80px</td><td>Page-level breathing room, hero sections</td></tr>
+        <tr><td>space-4xl</td><td>120px+</td><td>Full-width separations, dramatic white space</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">Layout Principles</h3>
+    <table class="data-table">
+      <thead><tr><th>Principle</th><th>What It Means</th><th>In Practice</th></tr></thead>
+      <tbody>
+        <tr><td>Hierarchy First</td><td>Every layout has one clear focal point</td><td>Use size, weight, and gradient to lead the eye</td></tr>
+        <tr><td>Warmth as Texture</td><td>The gradient is not decoration — it carries emotional weight</td><td>Use it at key moments: headlines, borders, CTAs</td></tr>
+        <tr><td>Breathing Room</td><td>Generous margins &gt; cramped information</td><td>When in doubt, increase the margin</td></tr>
+        <tr><td>Rhythm</td><td>Repeat spacing patterns consistently</td><td>Same padding on same-type components, always</td></tr>
+        <tr><td>Alignment</td><td>Everything aligns to an invisible grid</td><td>Nothing should ever look 'eyeballed'</td></tr>
+        <tr><td>One Message</td><td>One message per layout, one call to action</td><td>If it requires a paragraph to explain, simplify the design</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>White Space Philosophy:</strong> White space is not wasted space. It is power. HGDW designs breathe — we never cram, we never rush. Generous margins and spacing signal luxury, confidence, and clarity. When in doubt, add more air.
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       09 — BRAND GOVERNANCE
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="s9">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <h2 class="section-title">Brand Governance</h2>
+    </div>
+    <div class="section-rule"></div>
+
+    <h3 class="sub-header">Brand Owner</h3>
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">Primary Brand Owner</div><div class="field-value">Courtney Murtha — Founder &amp; Creative Director</div></div>
+      <div class="field-row"><div class="field-label">Design Lead</div><div class="field-value placeholder">[Fill in: freelancer, agency, or in-house designer name]</div></div>
+      <div class="field-row"><div class="field-label">Review Process</div><div class="field-value placeholder">[e.g. All customer-facing assets must be approved by Courtney before publishing]</div></div>
+    </div>
+
+    <h3 class="sub-header">Asset Library Structure</h3>
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">Root Folder</div><div class="field-value placeholder">[Link: Google Drive / Dropbox / Figma]</div></div>
+      <div class="field-row"><div class="field-label">/logos</div><div class="field-value">All approved variants — every color version, every file format (SVG, PNG, PDF)</div></div>
+      <div class="field-row"><div class="field-label">/fonts</div><div class="field-value">Albert Sans font files (OFL license) + usage rights documentation</div></div>
+      <div class="field-row"><div class="field-label">/photography</div><div class="field-value">Approved, edited, color-graded images ready for use</div></div>
+      <div class="field-row"><div class="field-label">/templates</div><div class="field-value">IG, TikTok, email, deck, PDF templates — ready for team use</div></div>
+      <div class="field-row"><div class="field-label">/brand-brief</div><div class="field-value">Versioned copies of this document</div></div>
+    </div>
+
+    <h3 class="sub-header">Version Control</h3>
+    <table class="data-table">
+      <thead><tr><th>Version</th><th>Date</th><th>Changes</th></tr></thead>
+      <tbody>
+        <tr><td>v1.0</td><td>March 2026</td><td>Initial brand brief — pre-launch. Font: Albert Sans. Gradient palette (#FFD56B → #FF7E5F → #FF5263).</td></tr>
+        <tr><td>v1.1</td><td class="placeholder">[Date]</td><td class="placeholder">[Fill in]</td></tr>
+        <tr><td>v2.0</td><td class="placeholder">[Date]</td><td class="placeholder">[Major refresh — post-launch learnings]</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-header">When to Update This Document</h3>
+    <table class="data-table">
+      <thead><tr><th>Trigger</th><th>Action</th><th>Owner</th></tr></thead>
+      <tbody>
+        <tr><td>Logo or wordmark change</td><td>Update Section 02 immediately — archive old version</td><td>Creative Director</td></tr>
+        <tr><td>Color palette change</td><td>Update Section 03 — notify all content creators</td><td>Creative Director</td></tr>
+        <tr><td>New font decision</td><td>Update Section 04 — distribute new files</td><td>Design Lead</td></tr>
+        <tr><td>New product or offer</td><td>Add to Section 07 touchpoints</td><td>Founder</td></tr>
+        <tr><td>New social platform</td><td>Add to Section 06 templates</td><td>Marketing Lead</td></tr>
+        <tr><td>6 months post-launch</td><td>Full brand audit and brief review</td><td>Founder + Creative Director</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       10 — QUICK REFERENCE CARD
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="s10">
+    <div class="section-header">
+      <span class="section-num">10</span>
+      <h2 class="section-title">Quick Reference Card</h2>
+    </div>
+    <div class="section-rule"></div>
+    <p class="section-intro">Print this page. Pin it. Share it with anyone who touches the brand.</p>
+
+    <h3 class="sub-header">The 10 Commandments</h3>
+    <div class="commandments">
+      <div class="commandments-header">HOT GIRLS DONT WORK — BRAND COMMANDMENTS</div>
+      <ol class="commandments-list">
+        <li><strong>1.</strong> The brand name is always <strong>HOT GIRLS DONT WORK</strong>. No apostrophe in DONT. Ever.</li>
+        <li><strong>2.</strong> The logo is always set in <strong>Albert Sans Bold, ALL CAPS</strong>. Never in another font.</li>
+        <li><strong>3.</strong> The gradient (<strong>#FFD56B → #FF7E5F → #FF5263</strong>) always moves warm-to-pink. Never reversed.</li>
+        <li><strong>4.</strong> The gradient is the <strong>accent</strong> — 10% rule. It accents. It does not dominate.</li>
+        <li><strong>5.</strong> Albert Sans is the <strong>only typeface</strong>. One font, applied with intention.</li>
+        <li><strong>6.</strong> Headings are <strong>ALL CAPS</strong>. Body copy is <strong>sentence case</strong>. Always.</li>
+        <li><strong>7.</strong> Photography is warm, editorial, and alive — not hustle, not stock, not stress.</li>
+        <li><strong>8.</strong> Every design has <strong>one focal point</strong>, one message, one call to action.</li>
+        <li><strong>9.</strong> White space is power. <strong>Never cram. Always breathe.</strong></li>
+        <li><strong>10.</strong> Joy is the strategy. If the design doesn't feel alive, it is not done.</li>
+      </ol>
+    </div>
+
+    <h3 class="sub-header">Colors &amp; Type at a Glance</h3>
+    <div class="swatch-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 32px;">
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#FFD56B;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Yellow — Hotspot</div>
+          <div class="swatch-hex">#FFD56B</div>
+          <div class="swatch-usage">Gradient center, warm fills</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#FF7E5F;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Coral — Midtone</div>
+          <div class="swatch-hex">#FF7E5F</div>
+          <div class="swatch-usage">Buttons, transitions, icons</div>
+        </div>
+      </div>
+      <div class="swatch-card">
+        <div class="swatch-color" style="background:#FF5263;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Sunset — Edges</div>
+          <div class="swatch-hex">#FF5263</div>
+          <div class="swatch-usage">CTAs, rules, headings, borders</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-grid">
+      <div class="field-row"><div class="field-label">Logo</div><div class="field-value">Albert Sans Bold — ALL CAPS — Gradient or reversed white</div></div>
+      <div class="field-row"><div class="field-label">Headings</div><div class="field-value">Albert Sans Bold — ALL CAPS — Charcoal #1C1C1E or Sunset #FF5263</div></div>
+      <div class="field-row"><div class="field-label">Body Copy</div><div class="field-value">Albert Sans Regular — Sentence case — Charcoal #1C1C1E</div></div>
+      <div class="field-row"><div class="field-label">CSS Font Stack</div><div class="field-value"><code>'Albert Sans', -apple-system, BlinkMacSystemFont, Arial, sans-serif</code></div></div>
+    </div>
+
+    <h3 class="sub-header">Tone at a Glance</h3>
+    <div class="tone-grid">
+      <div class="tone-head yes">HGDW Sounds Like This</div>
+      <div class="tone-head no">Not Like This</div>
+      <div class="tone-row">
+        <div class="tone-yes">Build it. Own it. Design your life on purpose.</div>
+        <div class="tone-no">Consider implementing a strategy to optimize your work-life balance.</div>
+      </div>
+      <div class="tone-row">
+        <div class="tone-yes">She's not ahead of you. She just started.</div>
+        <div class="tone-no">Struggling to keep up? You might be falling behind.</div>
+      </div>
+      <div class="tone-row">
+        <div class="tone-yes">AI handles the repetition. You handle the vision.</div>
+        <div class="tone-no">Our comprehensive AI framework helps streamline your workflow.</div>
+      </div>
+      <div class="tone-row">
+        <div class="tone-yes">Freedom is the point. Not productivity.</div>
+        <div class="tone-no">Work smarter to achieve maximum efficiency.</div>
+      </div>
+      <div class="tone-row">
+        <div class="tone-yes">The future is yours. Go build it.</div>
+        <div class="tone-no">Unlock your full potential with our proven system.</div>
+      </div>
+    </div>
+
+    <h3 class="sub-header">The Manifesto North Star</h3>
+    <div class="manifesto">
+      <blockquote>"The future belongs to women who can dream in beauty and execute in systems."</blockquote>
+      <cite>— The Hot Girl Manifesto</cite>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    hotgirlsdontwork.com &nbsp;|&nbsp; © 2026 Fertile World &nbsp;|&nbsp; CONFIDENTIAL — Do not distribute
+  </div>
+
+</div><!-- /.main -->
+
+<script>
+  // Active sidebar link on scroll
+  const sections = document.querySelectorAll('section[id], div[id="cover"]');
+  const navLinks = document.querySelectorAll('.sidebar nav a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const link = document.querySelector(`.sidebar nav a[href="#${entry.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
