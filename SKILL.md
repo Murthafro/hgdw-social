@@ -33,55 +33,64 @@ Create the directory if it doesn't exist:
 
 ---
 
-## Step 2: Influencer Sweep
-Search the following, prioritizing posts from the last 24 hours.
+## Step 2: Lab & Frontier Sweep (Run First — This Is the Source Material)
+Search the following, prioritizing the last 24 hours. These are the bleeding-edge
+sources we TRANSLATE for our audience.
 
 Run these searches in parallel:
 
-**Tier 1 — Women AI Leaders:**
+**Major Lab Announcements:**
+- `OpenAI announcement today`
+- `Anthropic Claude news today`
+- `Google DeepMind Gemini news today`
+- `Meta AI Llama news today`
+- `Mistral AI news today`
+- `AI model release today`
+
+**Major Publications:**
+- `site:techcrunch.com AI` — last 24h
+- `site:theverge.com artificial intelligence` — last 24h
+- `site:technologyreview.com AI` — last 24h
+- `site:wired.com artificial intelligence` — last 24h
+- `site:arstechnica.com AI` — last 24h
+
+**Bleeding-Edge Technical Voices:**
+- `site:x.com Andrej Karpathy` — last 24h
+- `site:x.com Jim Fan NVIDIA` — last 24h
+- `site:x.com Francois Chollet` — last 24h
+- `site:x.com Pieter Levels AI` — last 24h
+- `site:x.com Yann LeCun` — last 24h
+- `site:x.com Sam Altman` — last 24h
+- `site:x.com Ethan Mollick AI` — last 24h
+- `Greg Isenberg AI entrepreneur` — last 24h
+
+For each result worth keeping, note:
+- Source (who said it / where)
+- The core idea in 1-2 sentences
+- The HGDW translation: what does this mean for a woman building her business?
+- Tier (1 = lead story, 2 = supporting detail, 3 = background signal)
+
+---
+
+## Step 3: Women AI Voices & Industry Sweep
+Search for validation and audience-relevant angles:
+
+**Women AI Leaders (check what they're saying about the same news):**
 - `Allie Miller AI site:linkedin.com`
 - `Allie Miller AI site:x.com`
 - `Sabrina Ramonov AI tools`
 - `Harper Carroll AI site:x.com`
 - `Chip Huyen AI site:x.com`
-- `Hannah Fry AI`
-- `Aishwarya Srinivasan AI data`
-
-**Tier 2 — Women AI Creators (Instagram-first):**
 - `site:instagram.com sabrina_ramonov`
 - `site:instagram.com girlsguideai`
 - `site:instagram.com shelearnsai`
-- `site:instagram.com thataiputzinggirl`
 - `site:instagram.com ai.with.whit`
-- `site:instagram.com zauey.talks`
-- `site:instagram.com harpercarrollai`
 
-**Industry & Male Voices:**
-- `Greg Isenberg AI entrepreneur`
-- `Ethan Mollick AI practical use`
-- `OpenAI announcement today`
-- `Anthropic Claude news today`
-- `AI tools women entrepreneurs`
-- `AI business automation news today`
-- `AI education content creators women`
-
-For each result worth keeping, note:
-- Source (who said it / where)
-- The core idea in 1–2 sentences
-- Why it matters to our audience (women 28–48, building businesses or careers)
-- Tier (1 = lead story, 2 = supporting detail, 3 = background signal)
-
-Discard anything purely technical with no business or lifestyle relevance.
-
----
-
-## Step 3: Industry News Sweep
-Search for:
-- `AI news today entrepreneurship`
+**General Industry:**
 - `new AI tools launched today`
+- `AI tools women entrepreneurs`
 - `AI for small business this week`
-- `women AI founders news`
-- `AI automation update`
+- `AI business automation news today`
 - `Product Hunt AI today`
 
 Apply the Framing Filter from the watchlist:
@@ -114,10 +123,17 @@ Save to `/home/workspace/HGDW/Research/daily/YYYY-MM-DD.md` with this structure:
 [2–3 sentences: what happened + why it matters to our audience]
 Source: [name + link]
 
-## 📡 Influencer Watch
-[For each notable post/piece:]
-**[Influencer Name]** — [Platform]
-[1–2 sentence summary]
+## 🧪 Frontier Signal (Labs & Technical Voices)
+[For each lab announcement or technical voice post:]
+**[Source Name]** — [Platform]
+[1-2 sentence summary of what happened]
+HGDW Translation: [How to explain this to our audience in plain language]
+Source: [link]
+
+## 📡 Women AI Voices
+[For each notable post/piece from women AI leaders:]
+**[Name]** — [Platform]
+[1-2 sentence summary]
 HGDW Angle: [How to frame this for our audience]
 Source: [link]
 

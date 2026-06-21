@@ -99,42 +99,41 @@ BLOG POST DRAFT          SOCIAL POSTS BATCH        WEEKLY EMAIL DRAFT
 
 ## Influencer Watch List
 
-### Tier 1 — Daily (Women Leading AI Education & Content)
-- **Allie K. Miller** (@alliekmiller) — Instagram, LinkedIn, X — most trusted female AI voice for business builders
-- **Sabrina Ramonov** (@sabrina_ramonov) — Instagram, YouTube, X — AI tools tutorials and demos with massive reach
-- **Harper Carroll** (@harpercarrollai) — Instagram, LinkedIn — Stanford + Meta AI Engineer turned Educator
-- **Chip Huyen** (@huyenchip19) — Instagram, X, LinkedIn — AI/ML engineer, author
-- **Hannah Fry** (@fryrsquared) — Instagram, YouTube — mathematician and AI communicator
-- **Aishwarya Srinivasan** (@the.datascience.gal) — Instagram, LinkedIn — Data & AI LinkedIn Top Voice
+> **Strategy:** Monitor bleeding-edge technical voices and labs FIRST. They break
+> news and set the frontier. We TRANSLATE their signal for our audience. Women AI
+> educators validate and amplify. Publications give us credibility anchors.
 
-### Tier 2 — Daily (Women AI Creators & Educators)
-- **The Girl's Guide to AI** (@girlsguideai) — AI education for women
-- **She Learns AI** (@shelearnsai) — AI learning content for women
-- **AI with Whit** (@ai.with.whit) — AI education content
-- **Tracy** (@thataiputzinggirl) — AI tools exploration and education
-- **Lanie** (@lanie.lately) — AI Avatar Content Coach
-- **Claire Zau** (@zauey.talks) — AI education talks
-- **Shana** (@reinesana.ai) — practical AI for women building things
-- **Brand Nat** (@brand.nat) — AI/Tech for Business
-- **Tiffany Janzen** (@tiffintech) — Tech/AI content for women
-- **Simon Says AI** (@simon.saysai) — AI education tutorials
-- **Magan** (@genzbestie) — Building in Public with AI
-- **CatGPT** (@askcatgpt) — AI content with personality
-- **Paula Wehmeyer** (@pallipauu) — AI/Tech content
-- **Nandini Mullaji** (@dini_inabottle) — AI and tech education
-- **Maitri Mangal** (@maitrimangal) — AI content creator
-- **Khris Sheer** (@khris.sheer) — AI/Tech content
+### Tier 1 — Bleeding Edge (Source Material We Translate)
+- **Sam Altman** (@sama) — OpenAI CEO. Every post moves the industry.
+- **Andrej Karpathy** (@karpathy) — best technical explainer alive. His threads = our blog posts.
+- **Yann LeCun** (@ylecun) — Meta Chief AI Scientist. Open-source AI narrative.
+- **Jim Fan** (@DrJimFan) — NVIDIA research. Multimodal/robotics explainer.
+- **Francois Chollet** (@fchollet) — Keras creator. Sharpest AI hype critic.
+- **Pieter Levels** (@levelsio) — one person + AI = million-dollar business.
+- **Greg Isenberg** (@gregisenberg) — entrepreneurship + AI for builders.
+- **Ethan Mollick** — best at translating AI research into practical use.
+- + Dario Amodei, Demis Hassabis, George Hotz, Harrison Chase, Guillermo Rauch, and more
 
-### Tier 3 — Weekly (Communities & Organizations)
-- **Women Who Code** (@womenwhocode) — women in tech community
-- **Women In Tech Podcast** (@womenintechshow) — women in tech stories
-- **ELVTR** (@elvtrcom) — education platform with AI courses
-- **Jacklyn / The Next Big Thing** (@nbtjacklyn) — tech/AI trends
+### Tier 2 — Women AI Leaders & Educators
+- **Allie K. Miller** (@alliekmiller) — most trusted female AI voice for business builders
+- **Sabrina Ramonov** (@sabrina_ramonov) — AI tools tutorials with massive reach
+- **Harper Carroll** (@harpercarrollai) — Stanford + Meta AI Engineer turned Educator
+- **Chip Huyen** (@huyenchip19) — AI/ML engineer, author
+- **Hannah Fry** (@fryrsquared) — mathematician and AI communicator
+- + Aishwarya Srinivasan, Amanda Askell, Sara Gu
 
-### Tier 4 — Male Voices Worth Tracking
-- **Greg Isenberg** (@gregisenberg) — entrepreneurship + AI, strong audience crossover
-- **Sam Altman** — OpenAI announcements
-- **Ethan Mollick** — no-hype AI translation, very shareable
+### Tier 3 — Women AI Creators (Instagram-first)
+- 16 creators: @girlsguideai, @shelearnsai, @ai.with.whit, @thataiputzinggirl, @lanie.lately, @zauey.talks, @reinesana.ai, @brand.nat, @tiffintech, @simon.saysai, @genzbestie, @askcatgpt, @pallipauu, @dini_inabottle, @maitrimangal, @khris.sheer
+
+### Tier 4 — Major AI Labs
+- OpenAI, Anthropic, Google DeepMind, Meta AI, Mistral, xAI, Stability AI, Cohere, Hugging Face, NVIDIA AI, Perplexity, Runway, ElevenLabs, Midjourney, Cursor
+
+### Tier 5 — Major Publications & Newsletters
+- MIT Technology Review, Wired, The Verge, Ars Technica, TechCrunch, The Information, Bloomberg Technology, VentureBeat, Joanna Stern (WSJ)
+- Newsletters: TLDR AI, The Rundown AI, Ben's Bites, The Neuron, Import AI, AI Breakfast
+
+### Tier 6 — Communities
+- Women Who Code, Women In Tech Podcast, ELVTR, Women in AI
 
 Full list at: `hgdw-influencer-watchlist.md`
 
