@@ -88,6 +88,9 @@ mkdir -p /home/workspace/Skills/hgdw-trend-synthesizer
 mkdir -p /home/workspace/Skills/hgdw-content-repurposer
 mkdir -p /home/workspace/Skills/hgdw-copy-editor
 mkdir -p /home/workspace/Skills/hgdw-weekly-calibration
+mkdir -p /home/workspace/Skills/hgdw-review-dashboard
+mkdir -p /home/workspace/HGDW/Feedback
+mkdir -p /home/workspace/HGDW/Content/archive
 ```
 
 ## Step 2: Write All Reference Files
@@ -105,6 +108,7 @@ Save PART 10 (Social Posts) to `/home/workspace/Skills/hgdw-social-posts/SKILL.m
 Save PART 11 (Content Repurposer) to `/home/workspace/Skills/hgdw-content-repurposer/SKILL.md`
 Save PART 12 (Copy Editor) to `/home/workspace/Skills/hgdw-copy-editor/SKILL.md`
 Save PART 13 (Weekly Calibration) to `/home/workspace/Skills/hgdw-weekly-calibration/SKILL.md`
+Save PART 14 (Review Dashboard) to `/home/workspace/Skills/hgdw-review-dashboard/SKILL.md`
 
 ## Step 4: Initialize Intelligence Files
 Save to `/home/workspace/HGDW/Intelligence/trend-index.md`:
@@ -151,7 +155,7 @@ Always post as draft unless explicitly asked to publish.
 ```
 
 ## Step 5: Create All Automations
-Create these 7 automations:
+Create these 8 automations:
 
 ### Automation 1: Daily AI Research Sweep
 - **RRULE:** `FREQ=WEEKDAY;BYHOUR=7;BYMINUTE=0` (Mon-Fri at 7am)
@@ -256,36 +260,117 @@ Email me:
 - Trend trajectory report
 ```
 
-## Step 6: Install External Skills (Optional but Recommended)
-These are community skills from the Zo Skills Registry and GitHub that power up the engine.
-Install them in Zo by browsing the Skills Hub or asking Zo to install them:
-
+### Automation 8: Daily Review Dashboard + SMS Reminder
+- **RRULE:** `FREQ=WEEKDAY;BYHOUR=12;BYMINUTE=0` (Mon-Fri at noon)
+- **Delivery:** sms
+- **Instruction:**
 ```
-Install these skills from the Skills Hub:
-- copywriting (by Coreyhaines31) — expert conversion copywriting
-- copy-editing (by Coreyhaines31) — seven-sweep copy polish
-- email-sequence (by Coreyhaines31) — email drip campaigns and sequences
-- social-content (by Coreyhaines31) — platform-specific social strategy
-- marketing-ideas (by Coreyhaines31) — 140+ marketing tactics
+Run the hgdw-review-dashboard skill.
+Build the daily review dashboard at /home/workspace/HGDW/dashboard.md
+Scan all content directories for drafts awaiting approval.
+Pull recent research highlights and trend data.
+Check content performance tracker for published results.
+
+After building the dashboard, send me a text (SMS) with:
+- How many drafts are waiting for my approval
+- The strongest trend right now
+- One-line on what needs my attention most
+
+Keep the text under 160 characters. Just the essentials.
 ```
 
-Also bookmark these GitHub repos as reference material:
-- `stefan-georgi/dtc-copywriting-skills` — 44 RMBC copywriting skills with quality gates
-- `jakeolschewski/viral-hook-formulas` — 20 proven hook formulas with psychology
-- `jakeolschewski/email-marketing-templates-creators` — email templates + subject line formulas
-- `blacktwist/social-media-skills` — content strategy, calendars, repurposing, hooks
-- `snehilmodani/ContentPulse` — trend harvesting + multi-format content pipeline
-- `PlayingNumbers/Complete-Newsletter-Guide` — newsletter best practices from 1,315 campaigns
+## Step 6: Install Community Skills (REQUIRED)
+These community skills power up the content engine. Install them NOW:
+
+### From the Zo Skills Hub:
+Go to the Skills Hub and install each of these:
+1. **copywriting** (by Coreyhaines31) — expert conversion copywriting with RMBC method
+2. **copy-editing** (by Coreyhaines31) — seven-sweep copy polish and quality gate
+3. **email-sequence** (by Coreyhaines31) — email drip campaigns, sequences, and nurture flows
+4. **social-content** (by Coreyhaines31) — platform-specific social strategy and calendars
+5. **marketing-ideas** (by Coreyhaines31) — 140+ marketing tactics and growth experiments
+
+### From GitHub (clone and copy):
+```bash
+cd /home/workspace
+
+# Stefan Georgi's $700M copywriting system — 44 skills with quality gates
+git clone https://github.com/stefan-georgi/dtc-copywriting-skills.git 2>/dev/null || (cd dtc-copywriting-skills && git pull)
+cp -r dtc-copywriting-skills/skills/* /home/workspace/Skills/ 2>/dev/null || true
+
+# Jake Olschewski's viral hook formulas — 20 proven formulas with psychology
+git clone https://github.com/jakeolschewski/viral-hook-formulas.git 2>/dev/null || (cd viral-hook-formulas && git pull)
+mkdir -p /home/workspace/Skills/references
+cp viral-hook-formulas/*.md /home/workspace/Skills/references/ 2>/dev/null || true
+
+# Email marketing templates from 1,315 campaign analysis
+git clone https://github.com/jakeolschewski/email-marketing-templates-creators.git 2>/dev/null || (cd email-marketing-templates-creators && git pull)
+cp -r email-marketing-templates-creators/templates /home/workspace/Skills/references/email-templates 2>/dev/null || true
+
+# Social media skills — content strategy, calendars, repurposing, hooks
+git clone https://github.com/blacktwist/social-media-skills.git 2>/dev/null || (cd social-media-skills && git pull)
+cp -r social-media-skills/skills/* /home/workspace/Skills/ 2>/dev/null || true
+
+# Newsletter guide — best practices from 1,315 campaigns
+git clone https://github.com/PlayingNumbers/Complete-Newsletter-Guide.git 2>/dev/null || (cd Complete-Newsletter-Guide && git pull)
+cp Complete-Newsletter-Guide/*.md /home/workspace/Skills/references/ 2>/dev/null || true
+```
+
+## Step 6b: Install Barbie Skills (from HotFunBarbie repo)
+These operational skills give the Content Chief full business context:
+
+```bash
+cd /home/workspace
+if [ -d "barbie-os" ]; then
+  cd barbie-os && git pull
+else
+  git clone https://github.com/Murthafro/HotFunBarbie.git barbie-os
+fi
+
+# Copy all Barbie skills
+cp -r /home/workspace/barbie-os/zo/Skills/* /home/workspace/Skills/ 2>/dev/null || true
+
+# Copy context files
+mkdir -p /home/workspace/barbie/context
+cp -r /home/workspace/barbie-os/context/* /home/workspace/barbie/context/ 2>/dev/null || true
+
+# Copy prompt templates
+mkdir -p /home/workspace/barbie/prompts
+cp -r /home/workspace/barbie-os/prompts/* /home/workspace/barbie/prompts/ 2>/dev/null || true
+
+# Scaffold memory directories
+mkdir -p /home/workspace/barbie/life/{projects,areas/{people,companies},resources,archives}
+mkdir -p /home/workspace/barbie/memory
+mkdir -p /home/workspace/barbie/state
+```
+
+This gives you these additional skills:
+- **content-machine** — full content pipeline with virality scoring (Instagram, TikTok, X)
+- **content-dashboard** — live tracker for the 50-day Instagram series
+- **daily-instagram-script** — daily Instagram script for the Golden Age series
+- **revenue-metrics** — Stripe revenue tracking across accounts
+- **daily-review** — nightly revenue review + next-day planning
+- **site-health** — production site availability monitoring
+- **research** — web + X/Twitter search via Zo built-in tools
+- **x-posting** — X/Twitter posting and engagement
+- **coding-agent-loops** — persistent coding agent sessions with auto-retry
+- **elevenlabs-calls** — AI phone calls via ElevenLabs + Twilio
+- **talking-head** — AI avatar video generation
+- **blog-image-generator** — hero images via Gemini
+- **instagram-slides** — branded Instagram carousel creator
+- **email-fortress** — email security and prompt injection defense
 
 ## Step 7: Confirm Setup
 Report back:
-- Directory structure created (including Intelligence/ and trends/)
+- Directory structure created (including Intelligence/, Feedback/, archive/)
 - Reference files installed (brand + watchlist + hook library + copywriting playbook)
-- Skills installed (list all 8)
-- Automations installed (list all 7 with schedules)
+- HGDW skills installed (list all 9)
+- Barbie skills installed (list all 14)
+- Community skills installed (list all 5 from Skills Hub + 5 from GitHub)
+- Automations installed (list all 8 with schedules)
 - Intelligence files initialized (trend index, calibration log, performance tracker)
-- External skills installed (list which ones)
 - Action needed: fill in blog API config
+- Action needed: connect Stripe in Settings > Integrations (for revenue tracking)
 
 ---
 ---
@@ -1759,6 +1844,164 @@ Email summary:
 ```
 
 ---
+
+# PART 14: REVIEW DASHBOARD SKILL
+> Save to: `/home/workspace/Skills/hgdw-review-dashboard/SKILL.md`
+
+```
+---
+name: hgdw-review-dashboard
+description: >-
+  Build a daily review dashboard summarizing everything the HGDW Content Chief
+  produced — drafts awaiting approval, research highlights, trend alerts,
+  published content performance, and a feedback section. Generates a clean
+  markdown file Courtney can scan in under 2 minutes. Use when asked to
+  "build the dashboard", "show me what you've done", "review summary",
+  or triggered by the daily review-reminder automation.
+compatibility: Created for Zo Computer — HOT GIRLS DONT WORK
+metadata:
+  author: hgdw
+  category: Operations
+  display-name: HGDW Review Dashboard
+  emoji: "📋"
+  version: "1.0"
+allowed-tools: read_file create_or_rewrite_file run_command send_sms
+---
+
+# HGDW Review Dashboard
+
+Generate a daily dashboard that summarizes the Content Chief's work so Courtney can review and give feedback fast.
+
+## Before You Build
+
+### Step 1: Gather state
+
+Read these files to understand what's been produced:
+
+- `/home/workspace/HGDW/Research/daily/` — today's + recent research files
+- `/home/workspace/HGDW/Research/weekly-tracker.md` — weekly research summary
+- `/home/workspace/HGDW/Intelligence/trend-index.md` — active trends + trajectories
+- `/home/workspace/HGDW/Intelligence/calibration-log.md` — last calibration notes
+- `/home/workspace/HGDW/Intelligence/content-performance.md` — published content results
+- `/home/workspace/HGDW/Content/blog/` — blog drafts
+- `/home/workspace/HGDW/Content/emails/` — email drafts
+- `/home/workspace/HGDW/Content/social/` — social post drafts
+- `/home/workspace/HGDW/Feedback/` — previous feedback from Courtney
+
+### Step 2: Scan for pending approvals
+
+List all draft files created in the last 7 days that haven't been marked as approved or published.
+A file is "pending" if it does NOT contain `STATUS: APPROVED` or `STATUS: PUBLISHED` in its content.
+
+## Dashboard Format
+
+Write the dashboard to `/home/workspace/HGDW/dashboard.md`:
+
+```markdown
+# HGDW Content Chief — Daily Review
+_Updated [TODAY] · [DAY OF WEEK]_
+
+---
+
+## Awaiting Your Approval
+
+| # | Type | Title / Hook | Created | File |
+|---|------|-------------|---------|------|
+| 1 | Blog | [title] | [date] | [path] |
+| 2 | Email | [subject line] | [date] | [path] |
+| 3 | Social | [strongest hook] | [date] | [path] |
+
+> To approve: reply "approve #1" or "approve all"
+> To give feedback: reply "feedback #1: [your notes]"
+> To kill: reply "kill #1"
+
+---
+
+## Research Highlights (Last 3 Days)
+
+**[Today]:**
+- [Lead story — 1 sentence]
+- [Notable item 2]
+- [Notable item 3]
+
+**[Yesterday]:**
+- [Lead story]
+- [Notable items]
+
+---
+
+## Trend Watch
+
+| Topic | Days Seen | Trajectory | Content Opportunity? |
+|-------|-----------|-----------|---------------------|
+| [topic] | [X] | RISING / STABLE / FADING | [Yes/No — brief angle] |
+
+---
+
+## Published Content Performance
+
+| Date | Type | Title | Opens/Views | Clicks | Saves | Trend |
+|------|------|-------|-------------|--------|-------|-------|
+| [date] | [type] | [title] | [number] | [number] | [number] | [up/down/flat] |
+
+**Top performer this week:** [title] — [key metric]
+**Learning:** [one sentence on what this tells us]
+
+---
+
+## Engine Status
+
+| System | Status | Last Run |
+|--------|--------|----------|
+| Daily Research | [ran/missed] | [time] |
+| Trend Synthesis | [ran/missed] | [time] |
+| Blog Draft | [drafted/pending] | [date] |
+| Email Draft | [drafted/pending] | [date] |
+| Social Posts | [drafted/pending] | [date] |
+| Content Repurpose | [ran/pending] | [date] |
+| Weekly Calibration | [ran/pending] | [date] |
+
+---
+
+## Your Feedback
+
+Leave feedback below this line. The Content Chief reads this during calibration.
+
+<!-- FEEDBACK START -->
+
+<!-- FEEDBACK END -->
+```
+
+## Step 3: Handle missing data gracefully
+
+If a directory is empty or a file doesn't exist:
+- Show "No [type] drafts this week" instead of an empty table
+- Show "No performance data logged yet" for empty performance tracker
+- Show "Engine not yet started" for automations that haven't run
+
+## Step 4: Send SMS reminder
+
+After building the dashboard, send Courtney a text:
+
+```
+HGDW Review Ready — [X] drafts waiting, trending: [topic]. Open Zo to review.
+```
+
+Use `tool send_sms` with this message. Keep under 160 characters.
+
+## Processing Feedback
+
+When Courtney replies with feedback (via SMS or chat):
+
+- **"approve #N"** or **"approve all"** → Mark file(s) with `STATUS: APPROVED` at top. Proceed.
+- **"feedback #N: [notes]"** → Append to draft under `## Courtney's Feedback`. Save copy to `/home/workspace/HGDW/Feedback/`. Flag for revision.
+- **"kill #N"** → Mark with `STATUS: KILLED`. Archive to `/home/workspace/HGDW/Content/archive/`.
+- **"redo #N"** → Re-run the relevant content skill with Courtney's notes as context.
+
+After processing any feedback, rebuild the dashboard.
+```
+
+---
 ---
 ---
 
@@ -1766,10 +2009,12 @@ Email summary:
 
 1. Upload `hgdw-zo-setup.md` to your fresh Zo instance
 2. Tell Zo: **"Read this file and become the HGDW Chief of Staff. Set up the entire content engine."**
-3. Zo will install everything, adopt the persona, and report back
+3. Zo will install everything: persona, 9 HGDW skills, 14 Barbie skills, 5 community skills, 8 automations
 4. Fill in `/home/workspace/HGDW/config/blog-api.md` with your CMS credentials
-5. After publishing content, log results in `/home/workspace/HGDW/Intelligence/content-performance.md`
-6. The system gets smarter every week
+5. Connect Stripe in Settings > Integrations (for revenue tracking)
+6. After publishing content, log results in `/home/workspace/HGDW/Intelligence/content-performance.md`
+7. Every weekday at noon, you'll get a text reminding you to review the dashboard
+8. The system gets smarter every week
 
 **How to talk to your HGDW Chief of Staff:**
 - "what's happening in AI today?" — triggers daily research
@@ -1782,21 +2027,25 @@ Email summary:
 - "what worked this week?" / "calibrate" — triggers the learning loop
 - "update me" — gets a tight status report (headline + trends + content status + recommendation)
 - "find me a cool AI tool" — scouts new tools for Alex
+- "build the dashboard" / "show me what you've done" — builds the review dashboard
+- "approve #1" / "feedback #2: make the hook punchier" / "kill #3" — review draft approvals
 
 **This Zo instance is ONLY for HGDW marketing.** Keep your main Chief of Staff
 separate for personal/business ops. This one lives and breathes content.
 
 **The engine cycle:**
 ```
-Daily Research (7am) → Trend Synthesis (8:30am) → Blog (Tue) → Email (Wed)
-→ Social Posts (Tue) → Repurpose (Thu) → Calibrate (Sun) → REPEAT
+Daily Research (7am) → Trend Synthesis (8:30am) → Review Dashboard + SMS (noon)
+→ Blog (Tue) → Email (Wed) → Social (Tue) → Repurpose (Thu)
+→ Calibrate (Sun) → REPEAT
      ↑                                                         |
-     └─── learns from performance data ←──────────────────────┘
+     └─── learns from performance data + Courtney feedback ←──┘
 ```
 
 **After setup, Zo should greet you with something like:**
-> "HGDW Content Chief online. Engine installed — 8 skills, 7 automations, 6-tier watchlist,
-> intelligence layer active. Ready to run today's research or draft content. What do you need?"
+> "HGDW Content Chief online. Engine installed — 9 HGDW skills, 14 Barbie skills, 5 community
+> skills, 8 automations, 6-tier watchlist, intelligence layer active. Review dashboard will
+> text you at noon. Ready to run today's research or draft content. What do you need?"
 
 ---
 
